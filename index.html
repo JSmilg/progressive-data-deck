@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progressive Voter Mobilisation On Transgender Healthcare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@5.1.0/dist/theme/black.css">
+<style>
+:root {
+  --bg-deep: #0a0e1a;
+  --bg-mid: #0d1b2a;
+  --bg-light: #1b2d45;
+  --teal: #00d4aa;
+  --orange: #ff6b35;
+  --red: #ff3366;
+  --purple: #7b68ee;
+  --white: #ffffff;
+  --slate: #8892b0;
+  --surface: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.1);
+}
+
+.reveal-viewport { background: var(--bg-deep); }
+
+.reveal {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  color: var(--white);
+}
+
+.reveal .slides { text-align: left; }
+
+.reveal .slides section {
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.reveal h1 { font-size: 2.8em; line-height: 1.05; }
+.reveal h2 { font-size: 1.8em; line-height: 1.1; }
+.reveal h3 { font-size: 1.3em; line-height: 1.2; }
+
+.section-label {
+  text-transform: uppercase;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+  margin-bottom: 0.3em;
+  display: block;
+}
+
+.section-label.orange { color: var(--orange); }
+.section-label.red { color: var(--red); }
+.section-label.purple { color: var(--purple); }
+
+.reveal p, .reveal li {
+  font-weight: 400;
+  color: var(--slate);
+  line-height: 1.6;
+  font-size: 0.85em;
+}
+
+.reveal strong { color: var(--white); font-weight: 600; }
+
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding-left: 1.2em; position: relative; margin-bottom: 0.4em; }
+.reveal ul li::before {
+  content: '\25B8';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+/* Hero stat numbers */
+.hero-stat {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1;
+  margin: 0.1em 0;
+}
+.hero-stat.teal { color: var(--teal); }
+.hero-stat.orange { color: var(--orange); }
+.hero-stat.red { color: var(--red); }
+.hero-stat.purple { color: var(--purple); }
+.hero-stat.white { color: var(--white); }
+
+.hero-stat-label {
+  font-size: 0.7em;
+  color: var(--slate);
+  font-weight: 400;
+  margin-bottom: 1.2em;
+  display: block;
+}
+
+.stat-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.stat-block { flex: 1; min-width: 200px; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.card h4 {
+  font-size: 0.9em;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+}
+
+.card p, .card li { font-size: 0.72em; }
+
+.card-accent-top {
+  border-top: 3px solid var(--teal);
+}
+.card-accent-top.orange { border-top-color: var(--orange); }
+.card-accent-top.red { border-top-color: var(--red); }
+.card-accent-top.purple { border-top-color: var(--purple); }
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.65em;
+  margin-top: 0.5em;
+}
+
+.data-table th {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--teal);
+}
+
+.data-table td {
+  padding: 7px 10px;
+  color: var(--slate);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table .highlight { color: var(--white); font-weight: 600; }
+.data-table .teal { color: var(--teal); }
+.data-table .red { color: var(--red); }
+.data-table .orange { color: var(--orange); }
+.data-table .green { color: #00e676; }
+
+/* Weight bars - kept for individual variable slides */
+.weight-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+.weight-bar-label {
+  font-size: 0.7em;
+  color: var(--slate);
+  min-width: 60px;
+  text-align: right;
+}
+.weight-bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.weight-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: var(--teal);
+  transition: width 1s ease;
+}
+.weight-bar-fill.orange { background: var(--orange); }
+.weight-bar-fill.purple { background: var(--purple); }
+.weight-bar-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8em;
+  color: var(--white);
+  font-weight: 600;
+  min-width: 40px;
+}
+
+/* Stacked bar - shows model composition as full-width segments */
+.stacked-bar {
+  display: flex;
+  height: 28px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 12px 0 6px 0;
+}
+.stacked-bar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55em;
+  font-weight: 600;
+  color: var(--bg-deep);
+  transition: flex 0.6s ease;
+}
+.stacked-legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.stacked-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.58em;
+  color: var(--slate);
+}
+.stacked-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Funnel - inverted pyramid */
+.funnel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 10px auto;
+  max-width: 860px;
+}
+.funnel-step {
+  display: flex;
+  align-items: center;
+  padding: 12px 22px;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  position: relative;
+  cursor: default;
+}
+.funnel-step:nth-of-type(1) {
+  background: rgba(0,212,170,0.22);
+  border: 1px solid rgba(0,212,170,0.25);
+}
+.funnel-step:nth-of-type(2) {
+  background: rgba(0,212,170,0.16);
+  border: 1px solid rgba(0,212,170,0.2);
+}
+.funnel-step:nth-of-type(3) {
+  background: rgba(255,107,53,0.18);
+  border: 1px solid rgba(255,107,53,0.22);
+}
+.funnel-step:nth-of-type(4) {
+  background: rgba(255,51,102,0.2);
+  border: 1px solid rgba(255,51,102,0.25);
+}
+.funnel-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--white);
+  margin-right: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.funnel-text {
+  font-size: 0.58em;
+  color: var(--slate);
+  text-align: left;
+  line-height: 1.3;
+}
+.funnel-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0.6;
+  margin-right: 3px;
+}
+
+/* Funnel source - sits outside the box, right-aligned */
+.funnel-source {
+  display: block;
+  text-align: right;
+  font-size: 0.48em;
+  color: rgba(255,255,255,0.35);
+  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-right: 4px;
+}
+
+/* Budget bars */
+.budget-bar {
+  display: flex;
+  height: 36px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 6px 0;
+  font-size: 0.65em;
+  font-weight: 600;
+}
+.budget-bar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-deep);
+}
+
+/* Formula box */
+.formula-box {
+  background: rgba(0,212,170,0.08);
+  border: 1px solid rgba(0,212,170,0.3);
+  border-radius: 8px;
+  padding: 18px 24px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75em;
+  color: var(--teal);
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* Tier badge */
+.tier-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tier-badge.t1 { background: var(--teal); color: var(--bg-deep); }
+.tier-badge.t2 { background: var(--orange); color: var(--bg-deep); }
+.tier-badge.t3 { background: var(--purple); color: var(--white); }
+
+/* Glow effect */
+.glow-teal { text-shadow: 0 0 30px rgba(0,212,170,0.4); }
+.glow-orange { text-shadow: 0 0 30px rgba(255,107,53,0.4); }
+.glow-red { text-shadow: 0 0 30px rgba(255,51,102,0.4); }
+
+/* Accent line */
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin: 12px 0 20px 0;
+}
+.accent-line.orange { background: var(--orange); }
+.accent-line.red { background: var(--red); }
+
+/* Grid dot overlay */
+.dot-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+.dot-overlay > * { position: relative; z-index: 1; }
+
+/* Slide-specific backgrounds */
+.slide-bg-1 { background: linear-gradient(135deg, #0a0e1a 0%, #0d1b2a 50%, #1b2d45 100%); }
+.slide-bg-2 { background: linear-gradient(160deg, #0a0e1a 0%, #1a0a1a 60%, #0d1b2a 100%); }
+.slide-bg-3 { background: linear-gradient(140deg, #0d1b2a 0%, #0a1a2e 60%, #1b2d45 100%); }
+.slide-bg-4 { background: linear-gradient(150deg, #0a0e1a 0%, #0d1b2a 100%); }
+
+/* Counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal .slides section .fragment.visible .hero-stat,
+.reveal .slides section:not(.stack) .hero-stat {
+  animation: countUp 0.8s ease forwards;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .hero-stat { font-size: 3.5rem; }
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 16px 0;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 0;
+  position: relative;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 36px;
+  bottom: -10px;
+  width: 2px;
+  background: var(--border);
+}
+.timeline-item:last-child::before { display: none; }
+.timeline-num {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--bg-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.7em;
+  flex-shrink: 0;
+}
+.timeline-content { flex: 1; }
+.timeline-content strong { font-size: 0.8em; display: block; color: var(--white); }
+.timeline-content span { font-size: 0.65em; color: var(--slate); }
+
+/* Scoring table compact */
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.6em;
+  margin: 8px 0;
+}
+.score-table th {
+  text-align: left;
+  padding: 6px 8px;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--teal);
+}
+.score-table td {
+  padding: 5px 8px;
+  color: var(--slate);
+  border-bottom: 1px solid var(--border);
+}
+.score-table .mono {
+  font-family: 'DM Mono', monospace;
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* Platform icon placeholder */
+.platform-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-weight: 600;
+  background: rgba(0,212,170,0.15);
+  color: var(--teal);
+  margin: 2px 2px;
+}
+.platform-tag.secondary {
+  background: rgba(255,107,53,0.12);
+  color: var(--orange);
+}
+
+/* Illustrative disclaimer */
+.illustrative-note {
+  background: rgba(255,107,53,0.08);
+  border: 1px solid rgba(255,107,53,0.25);
+  border-radius: 6px;
+  padding: 10px 14px 10px 36px;
+  font-size: 0.55em;
+  color: var(--orange);
+  margin-top: 10px;
+  position: relative;
+  line-height: 1.5;
+}
+.illustrative-note::before {
+  content: '\26A0';
+  font-size: 1.2em;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+}
+
+/* Source tag */
+.source-tag {
+  font-size: 0.55em;
+  color: var(--slate);
+  font-style: italic;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Contents list */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 50px;
+}
+.toc-list li {
+  padding: 8px 0;
+  font-size: 0.72em;
+  color: var(--slate);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  break-inside: avoid;
+}
+.toc-list li::before { display: none; }
+.toc-list a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  transition: color 0.2s;
+}
+.toc-list a:hover { color: var(--white); }
+.toc-list a:hover .toc-num { color: var(--white); }
+.toc-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85em;
+  color: var(--teal);
+  font-weight: 600;
+  min-width: 24px;
+  transition: color 0.2s;
+}
+
+/* Print PDF override */
+@media print {
+  .reveal-viewport { background: #0a0e1a !important; }
+  .reveal .slides section { page-break-after: always; }
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1: TITLE -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <div style="display:flex;flex-direction:column;justify-content:center;height:100%;">
+    <div class="accent-line" style="width:80px;height:5px;margin-bottom:24px;"></div>
+    <h1 style="font-size:2.2em;margin-bottom:0.15em;">Progressive Voter Mobilisation<br>On Transgender Healthcare</h1>
+    <h2 style="font-size:1.1em;font-weight:400;color:var(--slate);margin-bottom:1.2em;">A targeting framework to define priority ad spend ahead of the midterm elections</h2>
+    <p style="font-size:0.75em;color:var(--slate);margin:0;">
+      <strong>Sensei Advisory</strong>
+    </p>
+    <p style="font-size:0.6em;color:rgba(255,255,255,0.25);margin-top:2em;">
+      Prepared by Julian Smilg &middot; May 2026 &middot; Confidential
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2: CONTENTS -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Overview</span>
+  <h2 style="font-size:1.4em;margin-bottom:0.6em;">Contents</h2>
+  <ul class="toc-list">
+    <li><a href="#/2"><span class="toc-num">01</span> Executive Summary</a></li>
+    <li><a href="#/3"><span class="toc-num">02</span> The Context</a></li>
+    <li><a href="#/4"><span class="toc-num">03</span> The Problem &amp; Approach</a></li>
+    <li><a href="#/6"><span class="toc-num">04</span> From Framework to Campaign</a></li>
+    <li><a href="#/7"><span class="toc-num">05</span> Total Addressable Audience</a></li>
+    <li><a href="#/10"><span class="toc-num">06</span> Model A: Disengagement Index</a></li>
+    <li><a href="#/16"><span class="toc-num">07</span> Model B: Salience Index</a></li>
+    <li><a href="#/21"><span class="toc-num">08</span> Priority Geographies &amp; Tier 1 States</a></li>
+    <li><a href="#/24"><span class="toc-num">09</span> Sub-Audience Deep Dives</a></li>
+    <li><a href="#/29"><span class="toc-num">10</span> Data, Limitations &amp; Next Steps</a></li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3: EXECUTIVE SUMMARY -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label">Overview</span>
+  <h2 style="font-size:1.25em;margin-bottom:0.3em;">Executive Summary</h2>
+  <p style="font-size:0.68em;margin-bottom:10px;">This framework answers a core question: <strong>how should we allocate ad spend to maximise the campaign's impact?</strong> We have built a data rubric identifying which demographic and psychographic datapoints define our target audience, estimated its scale, and used county-level scoring to pinpoint where our dollars will spend most efficiently.</p>
+  <div class="card fragment fade-up" style="margin-bottom:10px;border-left:3px solid var(--red);padding:14px 18px;">
+    <h4 style="font-size:0.72em;color:var(--red);margin-bottom:0.15em;">Why we did this</h4>
+    <p style="font-size:0.6em;">Too many naturally progressive voters are considering voting against Democratic candidates - or not voting at all. The political climate has become so fractured that people are willing to cut off their nose to spite their face. Previously, mobilising the base was considered "preaching to the choir". <strong>Now there is no choir.</strong> Without an evidence-based targeting model, ad dollars get spread too thin or concentrated on intuition. This framework ensures spend goes only to the counties with the highest concentration of our target audience.</p>
+  </div>
+  <div class="card-grid" style="gap:14px;">
+    <div class="card fragment fade-up" style="border-left:3px solid var(--teal);padding:14px 18px;">
+      <h4 style="font-size:0.72em;color:var(--teal);margin-bottom:0.15em;">What we built</h4>
+      <p style="font-size:0.58em;"><strong>Two county-level scoring models</strong> using publicly available data.<br><strong>Model A:</strong> Where Democratic voters are disappearing.<br><strong>Model B:</strong> Where trans rights are actively contested.<br><strong style="color:var(--teal);">Counties scoring high on both = top priority for ad spend.</strong></p>
+    </div>
+    <div class="card fragment fade-up" style="border-left:3px solid var(--orange);padding:14px 18px;">
+      <h4 style="font-size:0.72em;color:var(--orange);margin-bottom:0.15em;">What it delivers</h4>
+      <ul style="font-size:0.58em;margin:0;padding-left:0;">
+        <li>A prioritised list of target counties deployable on social media platforms</li>
+        <li>Four sub-audience segments with tailored content and targeting strategies</li>
+        <li>A data source catalogue identifying what to buy, what is free, and what to request</li>
+        <li>Clear next steps to move from framework to live campaign</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4: THE CONTEXT -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label red">The Context</span>
+  <h2 style="font-size:1.4em;margin-bottom:0.6em;">This campaign is fighting to protect transgender healthcare. The 2026 midterms are the frontline.</h2>
+  <div class="stat-row" style="margin-top:24px;">
+    <div class="stat-block fragment fade-up">
+      <div class="hero-stat red glow-red" style="font-size:4.5rem;">740+</div>
+      <span class="hero-stat-label">anti-trans bills introduced across <strong style="color:var(--red);">42 states</strong> in 2026</span>
+    </div>
+    <div class="stat-block fragment fade-up">
+      <div class="hero-stat orange glow-orange" style="font-size:4.5rem;">7</div>
+      <span class="hero-stat-label">states with <strong style="color:var(--orange);">trans healthcare</strong> directly on the 2026 ballot</span>
+    </div>
+  </div>
+  <p class="fragment fade-up" style="font-size:0.65em;margin-top:28px;color:var(--slate);">
+    This work uses a similar strategy - data-driven performance marketing - to the work done on TFA's <strong style="color:var(--white);">Conversion Truth For Families</strong> campaign. The goal is to find the progressive voters who can change these outcomes - and reach them before November.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5: THE PROBLEM -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label red">The Problem</span>
+  <h2 style="font-size:1.4em;margin-bottom:0.6em;">The progressive coalition is fracturing - and the opposition is spending to accelerate it.</h2>
+  <div class="stat-row" style="margin-top:20px;">
+    <div class="stat-block fragment fade-up">
+      <div class="hero-stat red glow-red" style="font-size:3.8rem;">$215M</div>
+      <span class="hero-stat-label">spent on <strong style="color:var(--red);">anti-trans ads</strong> in the 2024 cycle</span>
+    </div>
+    <div class="stat-block fragment fade-up">
+      <div class="hero-stat orange glow-orange" style="font-size:3.8rem;">-6.3M</div>
+      <span class="hero-stat-label"><strong style="color:var(--orange);">fewer Democratic votes</strong> from 2020 to 2024</span>
+    </div>
+    <div class="stat-block fragment fade-up">
+      <div class="hero-stat teal glow-teal" style="font-size:3.8rem;">~19M</div>
+      <span class="hero-stat-label">Biden 2020 voters who <strong style="color:var(--teal);">didn't vote</strong> in 2024</span>
+    </div>
+  </div>
+  <p class="fragment fade-up" style="font-size:0.65em;margin-top:20px;color:var(--slate);">
+    Democratic decline, not Republican surge, drove the outcome shift. Harris lost 6.3M votes while Trump gained only 3.1M. A record <strong>45% of Americans</strong> now identify as independents. <span style="font-style:italic;">(Gallup 2025)</span>
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5: THE APPROACH -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label">The Approach</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.8em;">Two parallel county-level scoring models identify where to spend.</h2>
+  <div class="card-grid" style="margin-top:10px;">
+    <div class="card card-accent-top fragment fade-up">
+      <h4 style="color:var(--teal);">Model A: Disengagement Index</h4>
+      <p>"Where are Democratic voters <strong>disappearing</strong> from the polls - and where does their absence hurt most?"</p>
+      <div class="stacked-bar" style="margin-top:12px;">
+        <div style="flex:35;background:var(--teal);">35%</div>
+        <div style="flex:30;background:var(--orange);">30%</div>
+        <div style="flex:20;background:var(--purple);color:var(--white);">20%</div>
+        <div style="flex:15;background:var(--red);color:var(--white);">15%</div>
+      </div>
+      <div class="stacked-legend">
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--teal);"></span> Dem Vote Decline 2020→2024</span>
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--orange);"></span> Competitive Race or Ballot Measure</span>
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--purple);"></span> Young Voter Density (18–34)</span>
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--red);"></span> Small-Dollar Donor Capacity</span>
+      </div>
+    </div>
+    <div class="card card-accent-top orange fragment fade-up">
+      <h4 style="color:var(--orange);">Model B: Salience Index</h4>
+      <p>"Where are trans rights <strong>actively on the line</strong> - and where can progressive voters make the difference?"</p>
+      <div class="stacked-bar" style="margin-top:12px;">
+        <div style="flex:40;background:var(--orange);">40%</div>
+        <div style="flex:35;background:var(--teal);">35%</div>
+        <div style="flex:25;background:var(--purple);color:var(--white);">25%</div>
+      </div>
+      <div class="stacked-legend">
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--orange);"></span> Trans Rights Legislative Activity</span>
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--teal);"></span> Competitive Race or Ballot Measure</span>
+        <span class="stacked-legend-item"><span class="stacked-legend-dot" style="background:var(--purple);"></span> Progressive Voter Density</span>
+      </div>
+    </div>
+  </div>
+  <p class="fragment fade-up" style="font-size:0.65em;margin-top:18px;text-align:center;color:var(--slate);">
+    Counties scoring high on <strong>both</strong> models = top-priority geographies. Four sub-audience segments enable tailored messaging.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6: FROM FRAMEWORK TO CAMPAIGN -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label orange">The Journey</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.5em;">From Framework to Campaign</h2>
+  <p style="font-size:0.62em;margin-bottom:14px;">This targeting framework is the foundation. Here is how it connects to an effective live campaign.</p>
+  <div style="display:flex;align-items:stretch;gap:0;margin-top:10px;">
+    <div class="card fragment fade-up" style="flex:1;text-align:center;padding:14px 10px;border-top:3px solid var(--teal);">
+      <div style="font-size:1.4em;margin-bottom:6px;">1</div>
+      <h4 style="font-size:0.7em;color:var(--teal);margin-bottom:4px;">Build Data Model</h4>
+      <p style="font-size:0.52em;">Identify demographic and psychographic datapoints. Build scoring rubric. Merge publicly available datasets.</p>
+    </div>
+    <div class="fragment fade-up" style="display:contents;">
+      <div style="display:flex;align-items:center;color:var(--teal);font-size:1.2em;flex-shrink:0;padding:0 6px;">&rarr;</div>
+      <div class="card" style="flex:1;text-align:center;padding:14px 10px;border-top:3px solid var(--teal);">
+        <div style="font-size:1.4em;margin-bottom:6px;">2</div>
+        <h4 style="font-size:0.7em;color:var(--teal);margin-bottom:4px;">Score &amp; Prioritise</h4>
+        <p style="font-size:0.52em;">County-level scoring. Tier geographies. Identify sub-audiences and where they concentrate.</p>
+      </div>
+    </div>
+    <div class="fragment fade-up" style="display:contents;">
+      <div style="display:flex;align-items:center;color:var(--teal);font-size:1.2em;flex-shrink:0;padding:0 6px;">&rarr;</div>
+      <div class="card" style="flex:1;text-align:center;padding:14px 10px;border-top:3px solid var(--orange);">
+        <div style="font-size:1.4em;margin-bottom:6px;">3</div>
+        <h4 style="font-size:0.7em;color:var(--orange);margin-bottom:4px;">Platform Deployment</h4>
+        <p style="font-size:0.52em;">Map counties to ad platform targeting units. Tailor creative by sub-audience. Allocate budget by tier.</p>
+      </div>
+    </div>
+    <div class="fragment fade-up" style="display:contents;">
+      <div style="display:flex;align-items:center;color:var(--orange);font-size:1.2em;flex-shrink:0;padding:0 6px;">&rarr;</div>
+      <div class="card" style="flex:1;text-align:center;padding:14px 10px;border-top:3px solid var(--red);">
+        <div style="font-size:1.4em;margin-bottom:6px;">4</div>
+        <h4 style="font-size:0.7em;color:var(--red);margin-bottom:4px;">Campaign Delivery</h4>
+        <p style="font-size:0.52em;">Drive audiences to campaign touchpoints. Mobilise, educate, and build an ongoing relationship.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-grid fragment fade-up" style="margin-top:14px;gap:12px;">
+    <div class="card" style="border-left:3px solid var(--orange);padding:12px 16px;">
+      <h4 style="font-size:0.7em;color:var(--orange);margin-bottom:2px;">Microsite</h4>
+      <p style="font-size:0.55em;">First-person testimonials from parents of trans children. Political mobilisation messaging. Showcase the campaign's impact and mission. Targeted at parents and the politically active.</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--teal);padding:12px 16px;">
+      <h4 style="font-size:0.7em;color:var(--teal);margin-bottom:2px;">Newsletter</h4>
+      <p style="font-size:0.55em;">Regular contact with our audience. Mobilise when needed - key votes, ballot deadlines. Survey opinions and understanding of the issues. Build a lasting relationship beyond the midterms.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: THE FUNNEL -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Total Addressable Audience</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.15em;">The Funnel</h2>
+  <p style="font-size:0.6em;margin-bottom:8px;">Estimating how many Americans fit our target profile: progressive-leaning voters who may not vote, or not vote Democrat, in the 2026 midterms.</p>
+  <div class="funnel-wrapper">
+    <div class="fragment fade-up" style="width:100%;display:flex;flex-direction:column;">
+      <div class="funnel-step" style="width:100%;">
+        <span class="funnel-num" style="color:var(--teal);">~174M</span>
+        <span class="funnel-text"><strong style="color:var(--white);">US Registered Voters</strong><br>73.6% of the citizen voting-age population</span>
+      </div>
+      <span class="funnel-source" style="width:100%;">Census Bureau CPS 2024</span>
+    </div>
+    <div class="fragment fade-up" style="width:82%;display:flex;flex-direction:column;">
+      <div class="funnel-step" style="width:100%;">
+        <span class="funnel-num" style="color:var(--teal);">~81.8M</span>
+        <span class="funnel-text"><strong style="color:var(--white);">Democrat or Lean-Democrat</strong><br><span class="funnel-pct">47%</span> of registered voters identify or lean Democrat</span>
+      </div>
+      <span class="funnel-source" style="width:100%;text-align:right;">Gallup 2025 party identification + leaners</span>
+    </div>
+    <div class="fragment fade-up" style="width:66%;display:flex;flex-direction:column;">
+      <div class="funnel-step" style="width:100%;">
+        <span class="funnel-num" style="color:var(--orange);">~26.2M</span>
+        <span class="funnel-text"><strong style="color:var(--white);">Presidential Voters Who Skip Midterms</strong><br><span class="funnel-pct">32%</span> of the above didn't vote in 2022; skewed 53-43% Biden</span>
+      </div>
+      <span class="funnel-source" style="width:100%;text-align:right;">Pew Research: Voter Turnout 2018-2022</span>
+    </div>
+    <div class="fragment fade-up" style="width:52%;display:flex;flex-direction:column;">
+      <div class="funnel-step" style="width:100%;background:rgba(255,51,102,0.28);border:2px solid rgba(255,51,102,0.7);box-shadow:0 0 30px rgba(255,51,102,0.25);">
+        <span class="funnel-num" style="color:var(--red);font-size:1.8em;">~15-20M</span>
+        <span class="funnel-text"><strong style="color:var(--white);font-size:1.1em;">Disaffected Progressive Pool</strong><br>~19M Biden voters didn't vote in 2024; 49% still follow politics closely</span>
+      </div>
+      <span class="funnel-source" style="width:100%;text-align:right;">The Nation (Podhorzer); Lake Research / Rolling Stone</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: SUB-AUDIENCE OVERVIEW -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label purple">Total Addressable Audience</span>
+  <h2 style="font-size:1.0em;margin-bottom:0.35em;">Four Sub-Audience Segments</h2>
+  <div class="card-grid" style="gap:8px;">
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--teal);padding:9px 12px;">
+      <h4 style="color:var(--teal);font-size:0.75em;margin-bottom:1px;">&#9670; Purity Progressives</h4>
+      <div style="font-family:'DM Mono',monospace;font-size:1.05em;color:var(--white);font-weight:600;margin-bottom:3px;">4–6M</div>
+      <p style="font-size:0.58em;margin-bottom:5px;line-height:1.35;">Voted Dem but feel left behind ideologically. Prioritises purity over pragmatism. Votes third-party, writes in a candidate, or stays home as a deliberate statement. College-educated, urban, 25–45.</p>
+      <p style="font-size:0.41em;color:var(--slate);font-style:italic;margin:0;line-height:1.3;">Gallup: 45% of liberal Dems want party further left. 15–20% of 18.2M non-voter pool = 2.7–3.6M base; scaled to 4–6M including third-party votes.</p>
+    </div>
+    <div class="card card-accent-top orange fragment fade-up" style="padding:9px 12px;">
+      <h4 style="color:var(--orange);font-size:0.75em;margin-bottom:1px;">&#9670; Exhausted Moderates</h4>
+      <div style="font-family:'DM Mono',monospace;font-size:1.05em;color:var(--white);font-weight:600;margin-bottom:3px;">10–14M</div>
+      <p style="font-size:0.58em;margin-bottom:5px;line-height:1.35;">Not ideologically alienated, just tuned out. Overwhelmed by political noise, no longer believes their vote matters. Were reliable Dem voters; now simply not showing up. Suburban, 35–55, working families.</p>
+      <p style="font-size:0.41em;color:var(--slate);font-style:italic;margin:0;line-height:1.3;">Gallup 37% Dem favourability (early 2025, historically low). CPS: 6.8M cited disengagement (presidential floor); midterm pool 2–3x larger implies 10–14M. Pew: 8.7M cited apathy; 57% don't wish they had voted.</p>
+    </div>
+    <div class="card card-accent-top red fragment fade-up" style="padding:9px 12px;">
+      <h4 style="color:var(--red);font-size:0.75em;margin-bottom:1px;">&#9670; Single-Issue Defectors</h4>
+      <div style="font-family:'DM Mono',monospace;font-size:1.05em;color:var(--white);font-weight:600;margin-bottom:3px;">3–5M</div>
+      <p style="font-size:0.58em;margin-bottom:5px;line-height:1.35;">Voted Dem in 2020, disengaged over a single failure: cost of living (31%), healthcare, housing. Still progressive on most issues, not conservative converts. The hardest segment to identify without voter file data.</p>
+      <p style="font-size:0.41em;color:var(--slate);font-style:italic;margin:0;line-height:1.3;">Lake Research (2020 Biden → 2024 non-voter panel): ~15–25% of non-voter pool. CPS: 14.7% cited candidate/issue dislike = 2.7M presidential floor; rises in midterms.</p>
+    </div>
+    <div class="card card-accent-top purple fragment fade-up" style="padding:9px 12px;">
+      <h4 style="color:var(--purple);font-size:0.75em;margin-bottom:1px;">&#9670; Disengaged Young Voters</h4>
+      <div style="font-family:'DM Mono',monospace;font-size:1.05em;color:var(--white);font-weight:600;margin-bottom:3px;">8–12M</div>
+      <p style="font-size:0.58em;margin-bottom:5px;line-height:1.35;">Progressive in values, disengaged from institutions. Votes when motivated, disappears in midterms. Many never registered. Highest potential ROI per contact: strong Dem lean, long voting horizon, responsive to cause-based messaging.</p>
+      <p style="font-size:0.41em;color:var(--slate);font-style:italic;margin:0;line-height:1.3;">CIRCLE/Tufts 24pt presidential-to-midterm gap × 30M 18–29s = ~7.2M structural non-voters; scaled to 8–12M for Dem-leaning subset. CPS: 2.6M registered 18–24s skipped the presidential. Competitive states: 31% youth midterm vs 47% presidential (CIRCLE 2022). Pew: young adults grew 25%→30% of all non-voters 2020→2024.</p>
+    </div>
+  </div>
+  <p style="font-size:0.43em;color:var(--slate);margin-top:6px;padding:4px 10px;border-left:2px solid var(--teal);font-style:italic;">
+    <strong style="color:var(--teal);font-style:normal;">Pool basis:</strong> Census CPS Nov 2024: <strong style="color:var(--white);">18.2M</strong> registered non-voters validates ~19M estimate &nbsp;·&nbsp; Pipeline: <strong style="color:var(--white);">7.5M</strong> fewer Dem votes 2024 vs 2020 (hard floor) &nbsp;·&nbsp; Segments overlap; estimates are directional
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 21: PURITY PROGRESSIVES -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide" style="padding:26px 60px;">
+  <span class="section-label" style="color:var(--teal);">Sub-Audience Profile</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.2em;color:var(--teal);">&#9670; Purity Progressives</h2>
+  <div class="accent-line" style="margin:4px 0 10px 0;"></div>
+  <div class="card-grid" style="gap:10px;">
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--teal);">Who They Are</h4>
+        <p style="font-size:0.62em;">Highly engaged voters demanding ideological alignment. May vote third party or leave ballot blank. Animated by climate, foreign policy, criminal justice reform.</p>
+      </div>
+      <div class="card fragment fade-up" style="padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--teal);">Demographics</h4>
+        <p style="font-size:0.6em;"><strong>Age:</strong> 25-45 &middot; <strong>Education:</strong> BA+ &middot; <strong>Setting:</strong> Urban metro (RUCC 1-3)</p>
+        <p style="font-size:0.6em;margin-top:4px;"><strong>Geography:</strong> Brooklyn, San Francisco, Portland, Austin, Cambridge, Durham, Madison</p>
+      </div>
+    </div>
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--teal);">Estimated Size</h4>
+        <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;">4-6M</div>
+        <p style="font-size:0.58em;">~15-20% of at-risk progressives. 45% of liberal Dems want party further left.</p>
+        <span class="source-tag">Gallup party ideology polling</span>
+      </div>
+      <div class="card fragment fade-up" style="padding:12px 20px;">
+        <h4 style="font-size:0.72em;color:var(--teal);margin-bottom:4px;">Platforms</h4>
+        <p style="font-size:0.6em;"><span class="platform-tag">Instagram</span> <span class="platform-tag">Reddit</span> <span class="platform-tag secondary">Programmatic</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="fragment fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+    <div class="card" style="border-left:3px solid var(--teal);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--slate);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">Their current point of view</p>
+      <p style="font-size:0.54em;font-style:italic;color:rgba(255,255,255,0.7);margin:0;">"If Democrats won't fight for real progressive change on every issue, why should I reward them with my vote? I'd rather vote third party than compromise my principles."</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--teal);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--teal);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">What we will convey to them</p>
+      <p style="font-size:0.54em;font-style:italic;color:var(--white);margin:0;">"The coalition isn't about agreement on everything - it's about preventing the worst outcomes for the most vulnerable."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 22: EXHAUSTED MODERATES -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide" style="padding:26px 60px;">
+  <span class="section-label orange">Sub-Audience Profile</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.2em;color:var(--orange);">&#9670; Exhausted Moderates</h2>
+  <div class="accent-line orange" style="margin:4px 0 10px 0;"></div>
+  <div class="card-grid" style="gap:10px;">
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--orange);">Who They Are</h4>
+        <p style="font-size:0.62em;">Burnt out on politics. Not protest-voting - checking out. Parents, professionals, people overwhelmed by political discourse. Voted in 2020 but may skip 2026.</p>
+      </div>
+      <div class="card fragment fade-up" style="padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--orange);">Demographics</h4>
+        <p style="font-size:0.6em;"><strong>Age:</strong> 35-55 &middot; <strong>Income:</strong> $50-100K HHI &middot; <strong>Setting:</strong> Suburban/exurban (RUCC 2-4)</p>
+        <p style="font-size:0.6em;margin-top:4px;"><strong>Geography:</strong> Montgomery Co. (PA/MD), DuPage Co. (IL), Gwinnett Co. (GA), Oakland Co. (MI), Loudoun Co. (VA)</p>
+      </div>
+    </div>
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--orange);">Estimated Size</h4>
+        <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--orange);font-weight:600;">10-14M</div>
+        <p style="font-size:0.58em;">The largest segment. Dem Party favourability at just 37% - among the worst ever recorded.</p>
+        <span class="source-tag">Gallup party favourability tracking</span>
+      </div>
+      <div class="card fragment fade-up" style="padding:12px 20px;">
+        <h4 style="font-size:0.72em;color:var(--orange);margin-bottom:4px;">Platforms</h4>
+        <p style="font-size:0.6em;"><span class="platform-tag secondary">YouTube</span> <span class="platform-tag secondary">CTV</span> <span class="platform-tag secondary">Podcasts</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="fragment fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+    <div class="card" style="border-left:3px solid var(--orange);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--slate);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">Their current point of view</p>
+      <p style="font-size:0.54em;font-style:italic;color:rgba(255,255,255,0.7);margin:0;">"I'm so tired of all of it. Both sides just shout at each other and nothing gets better. I don't think my vote makes any real difference."</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--orange);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--orange);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">What we will convey to them</p>
+      <p style="font-size:0.54em;font-style:italic;color:var(--white);margin:0;">"We know you're tired. But sitting this one out has real consequences for real families in your community."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 23: SINGLE-ISSUE DEFECTORS -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide" style="padding:26px 60px;">
+  <span class="section-label red">Sub-Audience Profile</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.2em;color:var(--red);">&#9670; Single-Issue Defectors</h2>
+  <div class="accent-line red" style="margin:4px 0 10px 0;"></div>
+  <div class="card-grid" style="gap:10px;">
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--red);">Who They Are</h4>
+        <p style="font-size:0.62em;">Agree with Democrats on most issues but alienated by a specific policy - Israel/Palestine, economic policy, immigration, or cultural issues. May protest-vote, go third party, or stay home.</p>
+      </div>
+      <div class="card fragment fade-up" style="padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--red);">Demographics</h4>
+        <p style="font-size:0.6em;"><strong>Indicator:</strong> Dem vote share dropped >5pts but total turnout remained stable</p>
+        <p style="font-size:0.6em;margin-top:4px;"><strong>Geography:</strong> University areas + diverse urban neighbourhoods (foreign policy); working-class suburbs (economic)</p>
+      </div>
+    </div>
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--red);">Estimated Size</h4>
+        <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--red);font-weight:600;">3-5M</div>
+        <p style="font-size:0.58em;">#1 reason Biden voters sat out 2024: "no plan for cost of living" - 31%.</p>
+        <span class="source-tag">Lake Research / Rolling Stone</span>
+      </div>
+      <div class="card fragment fade-up" style="padding:12px 20px;">
+        <h4 style="font-size:0.72em;color:var(--red);margin-bottom:4px;">Platforms</h4>
+        <p style="font-size:0.6em;"><span class="platform-tag" style="background:rgba(255,51,102,0.15);color:var(--red);">Facebook</span> <span class="platform-tag" style="background:rgba(255,51,102,0.15);color:var(--red);">Programmatic</span></p>
+        <p style="font-size:0.5em;color:rgba(255,255,255,0.3);font-style:italic;margin-top:6px;">HRC Scorecard flags D incumbents at defection risk - Cuellar (TX-28), Gluesenkamp Perez (WA-3), Don Davis (NC-1)</p>
+      </div>
+    </div>
+  </div>
+  <div class="fragment fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+    <div class="card" style="border-left:3px solid var(--red);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--slate);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">Their current point of view</p>
+      <p style="font-size:0.54em;font-style:italic;color:rgba(255,255,255,0.7);margin:0;">"Democrats lost my vote. They ignored the cost of living and the issues I care most about - why should I turn up for them again?"</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--red);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--red);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">What we will convey to them</p>
+      <p style="font-size:0.54em;font-style:italic;color:var(--white);margin:0;">"Your frustration is valid. But the alternative won't fix your issue - it will strip rights from the most vulnerable. Don't let that happen by default."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 24: DISENGAGED YOUNG VOTERS -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide" style="padding:26px 60px;">
+  <span class="section-label purple">Sub-Audience Profile</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.2em;color:var(--purple);">&#9670; Disengaged Young Voters</h2>
+  <div class="accent-line" style="background:var(--purple);margin:4px 0 10px 0;"></div>
+  <div class="card-grid" style="gap:10px;">
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--purple);">Who They Are</h4>
+        <p style="font-size:0.62em;">18-29 with progressive values who don't vote in midterms. Politically aware (high social media consumption, strong opinions) but haven't developed midterm voting habit.</p>
+      </div>
+      <div class="card fragment fade-up" style="padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--purple);">Demographics</h4>
+        <p style="font-size:0.6em;"><strong>Age:</strong> 18-29, >20% of county voting-age pop &middot; <strong>Housing:</strong> >50% renter-occupied</p>
+        <p style="font-size:0.6em;margin-top:4px;"><strong>Geography:</strong> College towns (Ann Arbor, Madison, Boulder, Chapel Hill) + urban rental centres (Philadelphia, Milwaukee, Atlanta, Phoenix)</p>
+      </div>
+    </div>
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:8px;padding:16px 20px;">
+        <h4 style="font-size:0.72em;color:var(--purple);">Estimated Size</h4>
+        <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--purple);font-weight:600;">8-12M</div>
+        <p style="font-size:0.58em;">24-point midterm turnout gap. Majorities of Gen Z + Millennials now identify as <strong>independents</strong>.</p>
+        <span class="source-tag">CIRCLE/Tufts; Gallup</span>
+      </div>
+      <div class="card fragment fade-up" style="padding:12px 20px;">
+        <h4 style="font-size:0.72em;color:var(--purple);margin-bottom:4px;">Platforms</h4>
+        <p style="font-size:0.6em;"><span class="platform-tag" style="background:rgba(123,104,238,0.15);color:var(--purple);">Snapchat</span> <span class="platform-tag" style="background:rgba(123,104,238,0.15);color:var(--purple);">TikTok (organic)</span> <span class="platform-tag" style="background:rgba(123,104,238,0.15);color:var(--purple);">Instagram</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="fragment fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+    <div class="card" style="border-left:3px solid var(--purple);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--slate);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">Their current point of view</p>
+      <p style="font-size:0.54em;font-style:italic;color:rgba(255,255,255,0.7);margin:0;">"Midterms aren't a big deal - they're not like a presidential election. I'll vote when it really matters."</p>
+    </div>
+    <div class="card" style="border-left:3px solid var(--purple);padding:10px 16px;">
+      <p style="font-size:0.44em;color:var(--purple);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-bottom:4px;">What we will convey to them</p>
+      <p style="font-size:0.54em;font-style:italic;color:var(--white);margin:0;">"Your vote in a midterm is 10x more powerful than in a presidential election - and trans rights are literally on the ballot."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8: MODEL A INTRO -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label">Model A</span>
+  <h2 style="font-size:1.6em;margin-bottom:0.3em;">The Disengagement Index</h2>
+  <div class="accent-line"></div>
+  <p style="font-size:0.9em;color:var(--white);font-weight:400;font-style:italic;margin-bottom:1em;">
+    "Where are Democratic voters disappearing - and where does their absence hurt most?"
+  </p>
+  <div class="card" style="margin-top:16px;">
+    <p style="font-size:0.78em;">Every US county receives a score from <strong>0-100</strong> based on four weighted variables.</p>
+    <p style="font-size:0.78em;margin-top:8px;">Four inputs: <strong style="color:var(--teal);">Turnout Decline (35%)</strong> + <strong style="color:var(--orange);">Competitive Race (30%)</strong> + <strong style="color:var(--purple);">Young Voter Density (20%)</strong> + <strong style="color:var(--red);">Progressive Organising Capacity (15%)</strong></p>
+  </div>
+  <div class="card fragment fade-up" style="margin-top:14px;border-left:3px solid var(--orange);">
+    <p style="font-size:0.72em;color:var(--slate);margin:0;">
+      <strong style="color:var(--orange);">Qualifying filter:</strong> Only counties with >=30% Democratic vote share (2024 presidential) are included. Below that threshold, insufficient progressive base to justify ad spend.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9: MODEL A - VAR 1 TURNOUT DECLINE -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label">Model A - Variable 1</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Democratic Turnout Decline</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 20px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill" style="width:35%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--teal);">35%</span>
+  </div>
+  <div class="card-grid">
+    <div class="card fragment fade-up">
+      <h4 style="font-size:0.8em;color:var(--teal);">What it measures</h4>
+      <p style="font-size:0.7em;">Change in Democratic votes cast across recent election cycles. Counties with the steepest decline score highest.</p>
+    </div>
+    <div class="card fragment fade-up">
+      <h4 style="font-size:0.8em;color:var(--teal);">Calculation</h4>
+      <p style="font-size:0.7em;">Average of two decline metrics:</p>
+      <p style="font-size:0.62em;font-family:'DM Mono',monospace;color:var(--white);margin-top:6px;">
+        Presidential: (Dem 2024 - Dem 2020) / Dem 2020<br>
+        Midterm: (Dem 2022 - Dem 2018) / Dem 2018
+      </p>
+    </div>
+  </div>
+  <div class="card fragment fade-up" style="margin-top:14px;">
+    <h4 style="font-size:0.75em;color:var(--slate);">Data Source</h4>
+    <p style="font-size:0.68em;"><strong>MIT Election Data + Science Lab (MEDSL)</strong> - county-level returns. Presidential 2020 &amp; 2024, Congressional 2018 &amp; 2022. Freely available. Normalised to 0-100 via min-max scaling.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10: MODEL A - VAR 2 COMPETITIVE RACE -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label orange">Model A - Variable 2</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Competitive 2026 Race</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 16px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill orange" style="width:30%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--orange);">30%</span>
+  </div>
+  <div class="card-grid">
+    <div>
+      <table class="score-table">
+        <thead><tr><th style="color:var(--orange);border-bottom-color:var(--orange);">Race Rating</th><th style="color:var(--orange);border-bottom-color:var(--orange);">Score</th></tr></thead>
+        <tbody>
+          <tr><td class="highlight">Toss-Up (Senate / House / Governor)</td><td class="mono teal">100</td></tr>
+          <tr><td>Lean D or Lean R</td><td class="mono">75</td></tr>
+          <tr><td>Likely D or Likely R</td><td class="mono">25</td></tr>
+          <tr><td>Safe D or Safe R</td><td class="mono" style="color:var(--slate);">0</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.6em;margin-top:10px;color:var(--slate);">If multiple competitive races, <strong>highest-scoring</strong> race is used.</p>
+    </div>
+    <div class="card fragment fade-up" style="font-size:0.62em;">
+      <h4 style="color:var(--orange);font-size:1.1em;">Key 2026 Toss-Up Races</h4>
+      <p><strong style="color:var(--white);">Senate:</strong> North Carolina, Michigan, Maine, Ohio (special)</p>
+      <p><strong style="color:var(--white);">House:</strong> 18+ seats - AZ-01, CO-08, ME-02, MI-07, OH-09, OH-13, PA-07, PA-08, PA-10, and more</p>
+      <p><strong style="color:var(--white);">Governor:</strong> Arizona, Georgia, Michigan, Wisconsin, Nevada, Iowa</p>
+      <p style="color:var(--slate);margin-top:8px;">Sources: Cook Political Report, Sabato's Crystal Ball</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11: MODEL A - VAR 3 YOUNG VOTER DENSITY -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label purple">Model A - Variable 3</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Young Voter Density (18-34)</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 16px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill purple" style="width:20%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--purple);">20%</span>
+  </div>
+  <div class="card-grid">
+    <div class="card fragment fade-up">
+      <h4 style="color:var(--purple);font-size:0.85em;">The 24-Point Gap</h4>
+      <div style="margin-top:10px;">
+        <div style="font-family:'DM Mono',monospace;font-size:2.2em;color:var(--white);font-weight:600;">47%</div>
+        <span style="font-size:0.6em;color:var(--slate);">Youth turnout, 2024 presidential</span>
+        <span style="font-size:0.5em;color:rgba(255,255,255,0.3);font-style:italic;margin-left:8px;">CIRCLE / Tufts</span>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+          <span style="font-size:1.4em;color:var(--red);font-weight:700;">&rarr;</span>
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:2.2em;color:var(--red);font-weight:600;">~23%</div>
+            <span style="font-size:0.6em;color:var(--slate);">Youth turnout, 2022 midterm</span>
+            <span style="font-size:0.5em;color:rgba(255,255,255,0.3);font-style:italic;margin-left:8px;">CIRCLE / Tufts</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.65em;margin-top:12px;">Roughly <strong>half</strong> of young presidential-year voters don't show up for midterms - the single largest source of progressive vote loss.</p>
+    </div>
+    <div class="card fragment fade-up">
+      <h4 style="color:var(--purple);font-size:0.85em;">Methodology</h4>
+      <p style="font-size:0.68em;"><strong>Calculation:</strong> (Pop aged 18-34) / (Total voting-age pop) per county, normalised to 0-100.</p>
+      <p style="font-size:0.68em;margin-top:8px;"><strong>Data:</strong> Census ACS Table B01001 - Sex by Age. County-level, annual updates, freely available.</p>
+      <p style="font-size:0.68em;margin-top:8px;">Majorities of Gen Z and Millennials now identify as <strong style="color:var(--purple);">political independents</strong> (Gallup 2025), reinforcing the disengagement signal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE [NEW]: MODEL A - VAR 4 PROGRESSIVE ORGANISING CAPACITY -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label red">Model A - Variable 4</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Progressive Organising Capacity</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 16px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill" style="width:15%;height:100%;background:var(--red);"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--red);">15%</span>
+  </div>
+  <div class="card-grid">
+    <div class="card fragment fade-up">
+      <h4 style="color:var(--red);font-size:0.85em;">What it measures</h4>
+      <p style="font-size:0.7em;"><strong>Small-dollar ActBlue donations ($5-$200)</strong> per capita by county, normalised to 0-100. Drawn from FEC itemised receipts filed at FEC.gov.</p>
+      <p style="font-size:0.68em;margin-top:8px;"><strong>Calculation:</strong> (ActBlue unique donor count) / (Registered voter count) per county, min-max scaled to 0-100.</p>
+      <p style="font-size:0.68em;margin-top:8px;"><strong>Data:</strong> FEC.gov electronic filings. Free. Updated quarterly. Mapped from zip to county via ZCTA-to-county crosswalk.</p>
+    </div>
+    <div class="card fragment fade-up" style="border-left:3px solid var(--red);">
+      <h4 style="color:var(--red);font-size:0.85em;">Rationale</h4>
+      <p style="font-size:0.7em;">Small-dollar donation activity is a direct proxy for <strong>progressive civic engagement</strong> - people motivated enough to give $10 to a campaign but who may not translate that motivation into midterm votes.</p>
+      <p style="font-size:0.7em;margin-top:8px;">Counties with <strong style="color:var(--teal);">high donor density but low turnout</strong> represent the highest-value mobilisation targets - latent progressive energy waiting to be activated.</p>
+      <p style="font-size:0.62em;margin-top:8px;color:var(--slate);">Excludes donations &gt;$200 to focus on grassroots giving patterns rather than high-net-worth individual donors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12: MODEL A - FORMULA + EXAMPLE -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label">Model A</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.4em;">Formula &amp; Illustrative Scores</h2>
+  <div class="formula-box fragment fade-up">
+    Disengagement Index = (<span style="color:var(--teal);">Turnout Decline x 0.35</span>) + (<span style="color:var(--orange);">Competitive Race x 0.30</span>) + (<span style="color:var(--purple);">Young Voter Density x 0.20</span>) + (<span style="color:var(--red);">Organising Capacity x 0.15</span>)
+  </div>
+  <table class="data-table fragment fade-up" style="margin-top:14px;font-size:0.58em;">
+    <thead>
+      <tr><th>County</th><th style="color:var(--teal);">Turnout</th><th style="color:var(--orange);">Race</th><th style="color:var(--purple);">Youth</th><th style="color:var(--red);">FEC</th><th>Index</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="highlight">Hamilton Co., OH (Cincinnati)</td>
+        <td class="mono teal">78</td><td class="mono orange">100</td><td class="mono" style="color:var(--purple);">72</td><td class="mono" style="color:var(--red);">68</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--teal);font-size:1.1em;">81.9</td>
+      </tr>
+      <tr>
+        <td class="highlight">Dane Co., WI (Madison)</td>
+        <td class="mono teal">45</td><td class="mono orange">100</td><td class="mono" style="color:var(--purple);">89</td><td class="mono" style="color:var(--red);">82</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--teal);font-size:1.1em;">75.9</td>
+      </tr>
+      <tr>
+        <td class="highlight">Maricopa Co., AZ (Phoenix)</td>
+        <td class="mono teal">62</td><td class="mono orange">75</td><td class="mono" style="color:var(--purple);">58</td><td class="mono" style="color:var(--red);">55</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--white);font-size:1.1em;">64.1</td>
+      </tr>
+      <tr>
+        <td class="highlight">Suffolk Co., MA (Boston)</td>
+        <td class="mono teal">30</td><td class="mono orange">0</td><td class="mono" style="color:var(--purple);">95</td><td class="mono" style="color:var(--red);">78</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--slate);font-size:1.1em;">41.2</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="illustrative-note fragment fade-up">
+    These are <strong>hypothetical scores</strong> to demonstrate how the formula works. They are not computed from actual data. The counties were chosen because their known characteristics (university presence, competitive races, turnout trends) make them useful examples. Actual scoring requires processing the datasets listed in this framework.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13: MODEL B INTRO -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label orange">Model B</span>
+  <h2 style="font-size:1.6em;margin-bottom:0.3em;">The Salience Index</h2>
+  <div class="accent-line orange"></div>
+  <p style="font-size:0.9em;color:var(--white);font-weight:400;font-style:italic;margin-bottom:1em;">
+    "Where are trans rights actively on the line - and where can progressive voters make the difference?"
+  </p>
+  <div class="card" style="margin-top:16px;">
+    <p style="font-size:0.78em;">Same structure as Model A - county-level scoring from <strong>0-100</strong>, with the >=30% Dem vote share qualifying filter.</p>
+    <p style="font-size:0.78em;margin-top:8px;">Three inputs: <strong style="color:var(--orange);">Trans Issue Activity (40%)</strong> + <strong style="color:var(--teal);">Competitive Race (35%)</strong> + <strong style="color:var(--purple);">Progressive Voter Density (25%)</strong></p>
+  </div>
+  <p class="fragment fade-up" style="font-size:0.72em;margin-top:18px;color:var(--slate);">
+    This model focuses on where trans issues are <strong>politically live</strong> rather than where voters are disengaging.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14: MODEL B - VAR 1 TRANS ISSUE ACTIVITY -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label orange">Model B - Variable 1</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.3em;">Trans Issue Political Activity</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:8px 0 12px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill orange" style="width:40%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--orange);">40%</span>
+  </div>
+  <div class="card-grid">
+    <div>
+      <div class="fragment fade-up">
+        <h4 style="font-size:0.75em;color:var(--orange);margin-bottom:6px;">Anti-Trans Ballot Measures (Score: 100)</h4>
+        <ul style="font-size:0.6em;">
+          <li><strong>Missouri</strong> - Amendment 3: bans transition care for minors + bans most abortions</li>
+          <li><strong>Colorado</strong> - Init. 110: bans gender-affirming surgery for minors</li>
+          <li><strong>Colorado</strong> - Init. 109: requires athletic teams by biological sex</li>
+          <li><strong>Washington</strong> - IL26-638: sex verification for girls' sports</li>
+          <li><strong>Maine</strong> - birth certificate requirement for sports/bathrooms</li>
+        </ul>
+      </div>
+      <div class="fragment fade-up">
+        <h4 style="font-size:0.75em;color:var(--orange);margin:10px 0 6px 0;">Pro-LGBTQ+ Measures (Score: 100)</h4>
+        <ul style="font-size:0.6em;">
+          <li><strong>Vermont</strong> - Proposal 4: gender identity in Bill of Rights</li>
+          <li><strong>Virginia</strong> - removes same-sex marriage ban</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fragment fade-up">
+      <div class="card" style="margin-bottom:10px;border-left:3px solid var(--red);">
+        <div style="font-family:'DM Mono',monospace;font-size:2em;color:var(--red);font-weight:600;">740+</div>
+        <span style="font-size:0.6em;color:var(--slate);">anti-trans bills across 42 states in 2026</span>
+      </div>
+      <table class="score-table" style="font-size:0.55em;">
+        <thead><tr><th>Criterion</th><th>Score</th></tr></thead>
+        <tbody>
+          <tr><td>Ballot measure on Nov 2026 ballot</td><td class="mono" style="color:var(--red);">100</td></tr>
+          <tr><td>10+ active anti-trans bills</td><td class="mono">80</td></tr>
+          <tr><td>Healthcare ban + legal challenge</td><td class="mono">70</td></tr>
+          <tr><td>Shield law under threat</td><td class="mono">60</td></tr>
+          <tr><td>Healthcare ban (no challenge)</td><td class="mono">50</td></tr>
+          <tr><td>Minimal activity</td><td class="mono" style="color:var(--slate);">10-20</td></tr>
+          <tr style="border-top:1px solid rgba(255,107,53,0.35);">
+            <td style="color:var(--orange);">+ ALA: &gt;5 LGBTQ+ book challenges/yr (county)</td>
+            <td class="mono" style="color:var(--orange);">+15</td>
+          </tr>
+          <tr>
+            <td style="color:var(--slate);">+ ALA: 2-4 book challenges/yr (county)</td>
+            <td class="mono" style="color:var(--slate);">+8</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.5em;color:var(--slate);margin-top:6px;font-style:italic;">ALA ChallengeDB modifiers applied at county level - provides granularity within a state score. Free. Annual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15: MODEL B - VAR 2 (same as A) -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label">Model B - Variable 2</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Competitive 2026 Race</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 16px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill" style="width:35%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--teal);">35%</span>
+  </div>
+  <div class="card" style="border-left:3px solid var(--teal);max-width:700px;">
+    <p style="font-size:0.85em;color:var(--white);margin:0;">
+      <strong>Identical methodology to Model A.</strong>
+    </p>
+    <p style="font-size:0.72em;margin-top:8px;">
+      Tiered scoring based on Cook Political Report / Sabato's Crystal Ball race ratings.
+      Toss-Up = 100, Lean = 75, Likely = 25, Safe = 0. Highest-scoring race in each county is used.
+    </p>
+  </div>
+  <div class="card-grid fragment fade-up" style="margin-top:20px;">
+    <div class="card card-accent-top">
+      <h4 style="font-size:0.8em;color:var(--teal);">Toss-Up Senate</h4>
+      <p style="font-size:0.68em;">North Carolina (open) &middot; Michigan (open) &middot; Maine (Collins) &middot; Ohio special (Brown vs Husted)</p>
+    </div>
+    <div class="card card-accent-top orange">
+      <h4 style="font-size:0.8em;color:var(--orange);">Toss-Up Governors</h4>
+      <p style="font-size:0.68em;">Arizona &middot; Georgia &middot; Michigan &middot; Wisconsin &middot; Nevada &middot; Iowa</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 16: MODEL B - VAR 3 PROGRESSIVE DENSITY -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label purple">Model B - Variable 3</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.3em;">Progressive Voter Density</h2>
+  <div class="weight-bar-container" style="max-width:500px;margin:12px 0 16px 0;">
+    <span class="weight-bar-label" style="font-size:0.8em;color:var(--white);font-weight:700;">Weight</span>
+    <div class="weight-bar-track" style="height:14px;"><div class="weight-bar-fill purple" style="width:25%;height:100%;"></div></div>
+    <span class="weight-bar-value" style="font-size:1em;color:var(--purple);">25%</span>
+  </div>
+  <p style="font-size:0.62em;margin-bottom:10px;">A <strong>composite of two equal sub-signals</strong> - each weighted 50% within this variable's 25% contribution to the overall score.</p>
+  <div class="card-grid">
+    <div class="card fragment fade-up">
+      <h4 style="color:var(--purple);font-size:0.85em;">Sub-signal 1: Democratic Vote Share (50%)</h4>
+      <p style="font-size:0.68em;"><strong>Calculation:</strong> (Dem votes 2024) / (Total votes 2024) per county, normalised to 0-100.</p>
+      <p style="font-size:0.68em;margin-top:6px;"><strong>Data:</strong> MIT MEDSL county-level presidential returns 2024. Free.</p>
+      <p style="font-size:0.68em;margin-top:6px;">Ensures trans salience is only elevated in counties with a reachable progressive base. A county with a ballot measure but 85% Republican vote share is not a productive place to spend.</p>
+    </div>
+    <div class="card fragment fade-up" style="border-left:3px solid var(--purple);">
+      <h4 style="color:var(--purple);font-size:0.85em;">Sub-signal 2: PRRI Acceptance Score (50%)</h4>
+      <p style="font-size:0.68em;"><strong>Source:</strong> PRRI American Values Atlas - annual metro and state-level survey of LGBTQ+ acceptance attitudes across the US.</p>
+      <p style="font-size:0.68em;margin-top:6px;"><strong>Use:</strong> Higher acceptance scores identify counties where pro-trans messaging is more likely to land and where progressive voters operate in a socially supportive environment. Applied at metro/state level, interpolated to county.</p>
+      <p style="font-size:0.62em;margin-top:6px;color:var(--slate);">Free. Annual release. Covers all 50 states and 30+ major metros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 17: MODEL B - FORMULA + EXAMPLE -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label orange">Model B</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.4em;">Formula &amp; Illustrative Scores</h2>
+  <div class="formula-box fragment fade-up" style="border-color:rgba(255,107,53,0.3);background:rgba(255,107,53,0.08);color:var(--orange);">
+    Salience Index = (<span style="color:var(--orange);">Trans Activity x 0.40</span>) + (<span style="color:var(--teal);">Competitive Race x 0.35</span>) + (<span style="color:var(--purple);">Progressive Density x 0.25</span>)
+  </div>
+  <table class="data-table fragment fade-up" style="margin-top:14px;">
+    <thead>
+      <tr><th>County</th><th style="color:var(--orange);">Trans</th><th style="color:var(--teal);">Race</th><th style="color:var(--purple);">Prog.</th><th>Index</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="highlight">Cumberland Co., ME (Portland)</td>
+        <td class="mono orange">100</td><td class="mono teal">100</td><td class="mono" style="color:var(--purple);">72</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--orange);font-size:1.1em;">93.0</td>
+      </tr>
+      <tr>
+        <td class="highlight">Franklin Co., OH (Columbus)</td>
+        <td class="mono orange">100</td><td class="mono teal">100</td><td class="mono" style="color:var(--purple);">80</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--orange);font-size:1.1em;">95.0</td>
+      </tr>
+      <tr>
+        <td class="highlight">Jackson Co., MO (Kansas City)</td>
+        <td class="mono orange">100</td><td class="mono teal">25</td><td class="mono" style="color:var(--purple);">75</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--white);font-size:1.1em;">67.5</td>
+      </tr>
+      <tr>
+        <td class="highlight">Adams Co., CO (CO-08)</td>
+        <td class="mono orange">100</td><td class="mono teal">100</td><td class="mono" style="color:var(--purple);">55</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--orange);font-size:1.1em;">88.5</td>
+      </tr>
+      <tr>
+        <td class="highlight">King Co., WA (Seattle)</td>
+        <td class="mono orange">100</td><td class="mono teal">0</td><td class="mono" style="color:var(--purple);">90</td>
+        <td style="font-family:'DM Mono',monospace;font-weight:700;color:var(--slate);font-size:1.1em;">62.5</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="illustrative-note fragment fade-up">
+    <strong>Hypothetical scores</strong> for demonstration only. Trans Activity scores (100) are based on confirmed ballot measures; Competitive Race scores reflect actual Cook ratings. Progressive Density values are estimates, not computed from data.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 18: PRIORITY TIERING -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label">Priority Geographies</span>
+  <h2 style="font-size:1.3em;margin-bottom:0.2em;">Where the Models Converge: Tiering</h2>
+  <p style="font-size:0.55em;color:var(--slate);margin-bottom:14px;">Qualifying universe: <strong style="color:var(--white);">1,427 counties</strong> with &ge;30% Democratic vote share (2024 presidential) across 3,143 US counties scored</p>
+  <div style="display:flex;gap:14px;margin-top:4px;">
+    <div class="card card-accent-top fragment fade-up" style="flex:1;border-top-color:var(--teal);padding:14px 16px;">
+      <span class="tier-badge t1">Tier 1</span>
+      <h4 style="font-size:0.82em;margin-top:8px;">Dual Priority</h4>
+      <p style="font-size:0.6em;">Top 20% in <strong>both</strong> models</p>
+      <div style="font-family:'DM Mono',monospace;font-size:1.6em;color:var(--teal);font-weight:700;margin:8px 0 2px;">156</div>
+      <p style="font-size:0.52em;color:var(--slate);margin-bottom:10px;">counties</p>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:4px;height:18px;overflow:hidden;">
+          <div style="width:100%;height:100%;background:var(--teal);border-radius:4px;"></div>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.68em;font-weight:700;color:var(--teal);min-width:50px;">50-60%</span>
+      </div>
+      <span style="font-size:0.52em;color:var(--slate);">of budget</span>
+    </div>
+    <div class="card card-accent-top orange fragment fade-up" style="flex:1;padding:14px 16px;">
+      <span class="tier-badge t2">Tier 2</span>
+      <h4 style="font-size:0.82em;margin-top:8px;">Single Model Priority</h4>
+      <p style="font-size:0.6em;">Top 20% in <strong>one</strong> model</p>
+      <div style="font-family:'DM Mono',monospace;font-size:1.6em;color:var(--orange);font-weight:700;margin:8px 0 2px;">260</div>
+      <p style="font-size:0.52em;color:var(--slate);margin-bottom:10px;">counties</p>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:4px;height:18px;overflow:hidden;">
+          <div style="width:55%;height:100%;background:var(--orange);border-radius:4px;"></div>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.68em;font-weight:700;color:var(--orange);min-width:50px;">25-35%</span>
+      </div>
+      <span style="font-size:0.52em;color:var(--slate);">of budget</span>
+    </div>
+    <div class="card card-accent-top purple fragment fade-up" style="flex:1;padding:14px 16px;">
+      <span class="tier-badge t3">Tier 3</span>
+      <h4 style="font-size:0.82em;margin-top:8px;">Moderate Priority</h4>
+      <p style="font-size:0.6em;">Top 40% both, not top 20%</p>
+      <div style="font-family:'DM Mono',monospace;font-size:1.6em;color:var(--purple);font-weight:700;margin:8px 0 2px;">138</div>
+      <p style="font-size:0.52em;color:var(--slate);margin-bottom:10px;">counties</p>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:4px;height:18px;overflow:hidden;">
+          <div style="width:25%;height:100%;background:var(--purple);border-radius:4px;"></div>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.68em;font-weight:700;color:var(--purple);min-width:50px;">10-15%</span>
+      </div>
+      <span style="font-size:0.52em;color:var(--slate);">of budget</span>
+    </div>
+    <div class="card fragment fade-up" style="flex:1;padding:14px 16px;opacity:0.6;">
+      <span class="tier-badge" style="background:rgba(255,255,255,0.1);color:var(--slate);">Tier 4</span>
+      <h4 style="font-size:0.82em;margin-top:8px;color:var(--slate);">Monitor Only</h4>
+      <p style="font-size:0.6em;color:var(--slate);">Qualifying but below thresholds</p>
+      <div style="font-family:'DM Mono',monospace;font-size:1.6em;color:var(--slate);font-weight:700;margin:8px 0 2px;">873</div>
+      <p style="font-size:0.52em;color:var(--slate);margin-bottom:10px;">counties</p>
+      <p style="font-size:0.52em;color:var(--slate);margin-top:10px;">No budget allocation at this stage</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 19: TIER 1 STATES (1 of 2) -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label">Priority Geographies</span>
+  <h2 style="font-size:1.15em;margin-bottom:0.15em;">Tier 1 States: Where the Model Points <span style="font-weight:400;color:var(--slate);font-size:0.7em;">(1 of 2)</span></h2>
+  <p style="font-size:0.52em;color:var(--slate);margin-bottom:12px;">States ranked by number of Tier 1 counties in the model output: 156 total</p>
+  <div class="card-grid" style="gap:10px;">
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--teal);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--teal);font-size:0.82em;">Iowa</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--teal);font-weight:700;">49 counties</span>
+      </div>
+      <p style="font-size:0.56em;margin-bottom:4px;line-height:1.35;">Widespread 2020→2024 Dem decline across rural and small-city counties. Gov toss-up race and competitive Senate add electoral weight.</p>
+      <p style="font-size:0.44em;color:var(--orange);font-style:italic;line-height:1.3;">Caveat: Iowa has been in structural partisan realignment for a decade. The model cannot yet distinguish recoverable disengagement from permanent shift. Requires deeper investigation before budget commitment.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading counties: Story (Ames), Black Hawk (Waterloo), Jefferson, Wapello, Woodbury (Sioux City)</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--teal);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--teal);font-size:0.82em;">North Carolina</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--teal);font-weight:700;">38 counties</span>
+      </div>
+      <p style="font-size:0.56em;margin-bottom:4px;line-height:1.35;">Concentrated in the rural east: majority-Black communities experiencing sustained Democratic disengagement. Genuinely competitive Senate race and multiple toss-up House districts make this a high-confidence target.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading counties: Hertford, Northampton, Bertie, Vance, Halifax, Cumberland (Fayetteville), Robeson</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--orange);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--orange);font-size:0.82em;">Texas</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--orange);font-weight:700;">18 counties</span>
+      </div>
+      <p style="font-size:0.56em;margin-bottom:4px;line-height:1.35;">Rio Grande Valley (Hidalgo, Cameron, Willacy, Kleberg) leads both models nationally. Heavily Latino border communities that swung sharply toward Republicans in 2024 while still clearing 43-48% Dem. Texas has the highest trans issue activity score of any state.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Also: Travis (Austin), Harris (Houston), Bexar (San Antonio) metro clusters</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--orange);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--orange);font-size:0.82em;">Kansas</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--orange);font-weight:700;">12 counties</span>
+      </div>
+      <p style="font-size:0.56em;margin-bottom:4px;line-height:1.35;">Gov toss-up race drives electoral salience. Wyandotte County (Kansas City) combines urban Dem decline with high competitive stakes. Finney County (Garden City) is a heavily Latino meatpacking community with sharp 2024 swing.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading counties: Wyandotte (Kansas City KS), Finney (Garden City)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 20: TIER 1 STATES (2 of 2) -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Priority Geographies</span>
+  <h2 style="font-size:1.15em;margin-bottom:0.15em;">Tier 1 States: Where the Model Points <span style="font-weight:400;color:var(--slate);font-size:0.7em;">(2 of 2)</span></h2>
+  <p style="font-size:0.52em;color:var(--slate);margin-bottom:12px;">Smaller clusters, still Tier 1, driven by strong electoral stakes or concentrated decline</p>
+  <div class="card-grid" style="gap:10px;">
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--purple);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--purple);font-size:0.82em;">Florida</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--purple);font-weight:700;">7 counties</span>
+      </div>
+      <p style="font-size:0.56em;line-height:1.35;">Miami-Dade saw the largest raw Dem vote decline of any major county nationally. Hillsborough (Tampa) and Pinellas (St. Pete) combine suburban decline with Florida's high trans issue activity score.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading counties: Miami-Dade, Hillsborough, Pinellas</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--purple);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--purple);font-size:0.82em;">Ohio</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--purple);font-weight:700;">7 counties</span>
+      </div>
+      <p style="font-size:0.56em;line-height:1.35;">Competitive Senate special election anchors electoral salience. Urban core counties (Franklin, Cuyahoga) combine meaningful Dem decline with high progressive organising capacity.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading counties: Franklin (Columbus), Cuyahoga (Cleveland), Summit (Akron)</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--red);padding:12px 14px;">
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+        <h4 style="color:var(--red);font-size:0.82em;">New Jersey</h4>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75em;color:var(--red);font-weight:700;">6 counties</span>
+      </div>
+      <p style="font-size:0.56em;line-height:1.35;">NJ-7 toss-up House district drives scores for suburban Essex and Union counties. Strong ActBlue donor density but meaningful 2024 Dem decline in communities that had been reliable.</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:3px;">Leading county: Union (highest Model A score in NJ)</p>
+    </div>
+    <div class="card fragment fade-up" style="padding:12px 14px;border-left:2px solid var(--border);">
+      <h4 style="color:var(--slate);font-size:0.82em;margin-bottom:6px;">Also in Tier 1</h4>
+      <p style="font-size:0.52em;color:var(--slate);line-height:1.4;">California (4): Tulare, Kern, Kings (high agricultural decline)</p>
+      <p style="font-size:0.52em;color:var(--slate);line-height:1.4;">New York (4): Rockland + outer boroughs</p>
+      <p style="font-size:0.52em;color:var(--slate);line-height:1.4;">Wisconsin (3) &nbsp;·&nbsp; Georgia (2) &nbsp;·&nbsp; Maine (2) &nbsp;·&nbsp; Colorado (1) &nbsp;·&nbsp; Michigan (1) &nbsp;·&nbsp; Missouri (1)</p>
+      <p style="font-size:0.44em;color:var(--slate);margin-top:6px;font-style:italic;">Full county-level rankings available in the model output CSV</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE: SNEAK PEEK: EARLY MODEL INSIGHT -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label">Priority Geographies</span>
+  <h2 style="font-size:1.1em;margin-bottom:0.1em;">Sneak Peek: Early Signals from the Model</h2>
+  <p style="font-size:0.54em;color:var(--slate);margin-bottom:14px;">Full analysis is in progress. Here is what the initial output is already showing clearly.</p>
+  <div class="card-grid-3" style="gap:10px;margin-bottom:12px;">
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--teal);padding:12px 14px;">
+      <p style="font-size:0.5em;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Finding 1</p>
+      <h4 style="font-size:0.75em;margin-bottom:6px;line-height:1.3;">The Rio Grande Valley stands alone at the top</h4>
+      <p style="font-size:0.53em;line-height:1.35;">Hidalgo, Cameron, Willacy and Kleberg counties in South Texas lead <strong>both models simultaneously</strong>, the rarest and highest-confidence signal. These heavily Latino border communities swung 15-20 points toward Republicans in 2024 while still clearing 43-48% Democratic. Disengagement is acute and recent. Texas has the highest trans issue salience score nationally.</p>
+      <p style="font-size:0.44em;color:var(--teal);margin-top:6px;">Model A scores: 62-73 &nbsp;·&nbsp; Model B scores: 82-83</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--orange);padding:12px 14px;">
+      <p style="font-size:0.5em;color:var(--orange);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Finding 2</p>
+      <h4 style="font-size:0.75em;margin-bottom:6px;line-height:1.3;">Iowa's 49 counties need a second look before committing budget</h4>
+      <p style="font-size:0.53em;line-height:1.35;">Iowa has more Tier 1 counties than any other state, driven by sharp and widespread 2020→2024 Dem decline. But Iowa has been shifting right structurally for a decade. The model reads this as recoverable disengagement, but it may be permanent partisan realignment. The RGV swing is two years old and localised; Iowa's is a decade in the making. This is the most important validation question before the next planning stage.</p>
+      <p style="font-size:0.44em;color:var(--orange);margin-top:6px;">Recommend: qualitative research in 2-3 Iowa counties before budget allocation</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="border-top-color:var(--purple);padding:12px 14px;">
+      <p style="font-size:0.5em;color:var(--purple);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Finding 3</p>
+      <h4 style="font-size:0.75em;margin-bottom:6px;line-height:1.3;">North Carolina is the most confident large-scale opportunity</h4>
+      <p style="font-size:0.53em;line-height:1.35;">38 Tier 1 counties, concentrated in the rural east among majority-Black communities with documented Dem disengagement. A genuinely competitive Senate race and multiple toss-up House districts mean electoral stakes are real. Unlike Iowa, NC's decline is recent and geographically concentrated, more consistent with with the recoverable disengagement the model is designed to find.</p>
+      <p style="font-size:0.44em;color:var(--purple);margin-top:6px;">Both models point here: real disengagement data + verified electoral competition</p>
+    </div>
+  </div>
+  <div class="card fragment fade-up" style="padding:10px 16px;border-left:3px solid var(--slate);">
+    <p style="font-size:0.46em;color:var(--slate);font-style:italic;margin:0;">Further analysis underway: precinct-level validation, qualitative research design for Iowa, and Tier 2 county prioritisation within NC and TX. Full county rankings available on request.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 25: PLATFORM MAPPING -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label">Platform &amp; Deployment</span>
+  <h2 style="font-size:1.15em;margin-bottom:0.4em;">Platform Mapping: County to Ad Targeting</h2>
+  <div style="display:flex;gap:8px;margin-bottom:12px;">
+    <div style="flex:1;padding:7px 12px;border-radius:6px;border-left:3px solid var(--teal);background:rgba(0,200,170,0.07);">
+      <span class="tier-badge t1" style="font-size:0.55em;padding:1px 6px;margin-bottom:4px;display:inline-block;">Tier 1</span>
+      <p style="font-size:0.46em;margin:2px 0 0 0;line-height:1.3;"><strong style="color:var(--teal);">156 counties.</strong> Top 20% on both Model A and Model B. Highest concentration of disengaged progressives in high-salience geographies. Priority for 50-60% of budget.</p>
+    </div>
+    <div style="flex:1;padding:7px 12px;border-radius:6px;border-left:3px solid var(--orange);background:rgba(255,107,53,0.07);">
+      <span class="tier-badge t2" style="font-size:0.55em;padding:1px 6px;margin-bottom:4px;display:inline-block;">Tier 2</span>
+      <p style="font-size:0.46em;margin:2px 0 0 0;line-height:1.3;"><strong style="color:var(--orange);">260 counties.</strong> Top 20% on one model only. Strong disengagement signal or high trans issue salience, but not both. Secondary priority, 25-35% of budget.</p>
+    </div>
+    <div style="flex:1;padding:7px 12px;border-radius:6px;border-left:3px solid var(--purple);background:rgba(123,104,238,0.07);">
+      <span class="tier-badge t3" style="font-size:0.55em;padding:1px 6px;margin-bottom:4px;display:inline-block;">Tier 3</span>
+      <p style="font-size:0.46em;margin:2px 0 0 0;line-height:1.3;"><strong style="color:var(--purple);">138 counties.</strong> Top 40% on both models, but not top 20%. Moderate opportunity. Activate only if budget allows, 10-15% of budget.</p>
+    </div>
+  </div>
+  <table class="data-table fragment fade-up" style="font-size:0.58em;">
+    <thead>
+      <tr><th>Platform</th><th>Targeting Units</th><th>Mapping Method</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="highlight">Meta (FB/IG)</td>
+        <td>Zip, city, radius, state</td>
+        <td>ZCTA-to-county crosswalk; radius on county seats</td>
+        <td><span class="platform-tag" style="font-size:0.9em;">All segments</span></td>
+      </tr>
+      <tr>
+        <td class="highlight">Google / YouTube</td>
+        <td>DMA, district, zip, radius</td>
+        <td>Aggregate county scores to DMA level</td>
+        <td>Exhausted Moderates, Young Voters</td>
+      </tr>
+      <tr>
+        <td class="highlight">Programmatic / CTV</td>
+        <td>County, zip, DMA, lat/long</td>
+        <td>Direct county-level - no mapping needed</td>
+        <td>Exhausted Moderates (CTV)</td>
+      </tr>
+      <tr>
+        <td class="highlight">TikTok</td>
+        <td style="color:var(--red);">N/A (political ads banned)</td>
+        <td>Inform influencer partnerships by geo</td>
+        <td>Young Voters (organic only)</td>
+      </tr>
+      <tr>
+        <td class="highlight">Snapchat</td>
+        <td>Zip, city, state, radius</td>
+        <td>Same as Meta mapping</td>
+        <td>Young Voters</td>
+      </tr>
+      <tr>
+        <td class="highlight">Podcast (prog. audio)</td>
+        <td>DMA</td>
+        <td>Aggregate county scores to DMA</td>
+        <td>Exhausted Moderates</td>
+      </tr>
+      <tr>
+        <td class="highlight">Reddit</td>
+        <td>Interest/community</td>
+        <td>Target state/city subreddits</td>
+        <td>Purity Progressives</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="fragment fade-up" style="font-size:0.55em;color:var(--slate);margin-top:10px;">
+    <strong>Key restriction:</strong> Meta + Google limit issue ad targeting to <strong>geo + age + gender only</strong>. No interest/behaviour targeting. Advertiser verification required.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 26: PLATFORM MIX BY SEGMENT -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label">Platform &amp; Deployment</span>
+  <h2 style="font-size:1.15em;margin-bottom:0.5em;">Platform Mix by Segment</h2>
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div class="fragment fade-up">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span style="font-size:0.7em;font-weight:700;color:var(--teal);min-width:180px;">Purity Progressives</span>
+      </div>
+      <div class="budget-bar">
+        <div style="width:70%;background:var(--teal);">Meta 70%</div>
+        <div style="width:20%;background:rgba(0,212,170,0.5);color:var(--white);">Prog. 20%</div>
+        <div style="width:10%;background:rgba(0,212,170,0.3);color:var(--white);">Reddit 10%</div>
+      </div>
+    </div>
+    <div class="fragment fade-up">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span style="font-size:0.7em;font-weight:700;color:var(--orange);min-width:180px;">Exhausted Moderates</span>
+      </div>
+      <div class="budget-bar">
+        <div style="width:50%;background:var(--orange);">YouTube 50%</div>
+        <div style="width:30%;background:rgba(255,107,53,0.5);color:var(--white);">CTV 30%</div>
+        <div style="width:20%;background:rgba(255,107,53,0.3);color:var(--white);">Podcast 20%</div>
+      </div>
+    </div>
+    <div class="fragment fade-up">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span style="font-size:0.7em;font-weight:700;color:var(--red);min-width:180px;">Single-Issue Defectors</span>
+      </div>
+      <div class="budget-bar">
+        <div style="width:80%;background:var(--red);">Meta (Facebook) 80%</div>
+        <div style="width:20%;background:rgba(255,51,102,0.4);color:var(--white);">Prog. 20%</div>
+      </div>
+    </div>
+    <div class="fragment fade-up">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span style="font-size:0.7em;font-weight:700;color:var(--purple);min-width:180px;">Disengaged Young Voters</span>
+      </div>
+      <div class="budget-bar">
+        <div style="width:50%;background:var(--purple);">Snapchat 50%</div>
+        <div style="width:30%;background:rgba(123,104,238,0.5);color:var(--white);">IG 30%</div>
+        <div style="width:20%;background:rgba(123,104,238,0.3);color:var(--white);">TikTok 20%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 27: DATA SOURCE CATALOGUE -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Data &amp; Next Steps</span>
+  <h2 style="font-size:1.1em;margin-bottom:0.4em;">Data Source Catalogue</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div>
+      <div class="fragment fade-up">
+        <h4 style="font-size:0.7em;color:var(--teal);margin-bottom:6px;">Core Model Data (Free)</h4>
+        <table class="score-table" style="font-size:0.52em;">
+          <thead><tr><th>#</th><th>Dataset</th><th>Source</th><th>Granularity</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">1</td><td>County Presidential Returns</td><td>MIT MEDSL</td><td>County</td></tr>
+            <tr><td class="mono">2</td><td>County Congressional Returns</td><td>MIT MEDSL</td><td>County</td></tr>
+            <tr><td class="mono">3</td><td>Age Distribution</td><td>Census ACS B01001</td><td>County</td></tr>
+            <tr><td class="mono">4</td><td>Race Competitiveness</td><td>Cook Political Report</td><td>District/State</td></tr>
+            <tr><td class="mono">5</td><td>2026 Ballot Measures</td><td>Ballotpedia</td><td>State</td></tr>
+            <tr><td class="mono">6</td><td>Anti-Trans Bill Tracker</td><td>ACLU</td><td>State</td></tr>
+            <tr><td class="mono">7</td><td>Healthcare Ban/Shield Status</td><td>MAP</td><td>State</td></tr>
+            <tr><td class="mono">8</td><td>HRC Congressional Scorecard</td><td>Human Rights Campaign</td><td>District</td></tr>
+            <tr><td class="mono teal">9</td><td style="color:var(--teal);">LGBTQ+ Acceptance Score</td><td>PRRI Amer. Values Atlas</td><td>State/Metro</td></tr>
+            <tr><td class="mono teal">10</td><td style="color:var(--teal);">Library Book Challenges</td><td>ALA ChallengeDB</td><td>County</td></tr>
+            <tr><td class="mono teal">11</td><td style="color:var(--teal);">ActBlue Small-Dollar Donors</td><td>FEC.gov filings</td><td>Zip/County</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fragment fade-up">
+        <h4 style="font-size:0.7em;color:var(--orange);margin:10px 0 6px 0;">Supplementary (Free)</h4>
+        <table class="score-table" style="font-size:0.52em;">
+          <thead><tr><th>#</th><th>Dataset</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">12</td><td>Educational Attainment</td><td>Census ACS B15003</td></tr>
+            <tr><td class="mono">13</td><td>Household Income</td><td>Census ACS B19013</td></tr>
+            <tr><td class="mono">14</td><td>Urbanicity Codes</td><td>USDA RUCC 2023</td></tr>
+            <tr><td class="mono">15</td><td>Trans Population Estimates</td><td>Williams Institute</td></tr>
+            <tr><td class="mono">16-17</td><td>Renter Housing + Colleges</td><td>Census / NCES IPEDS</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="fragment fade-up" style="display:flex;align-items:center;margin-bottom:6px;">
+        <h4 style="font-size:0.7em;color:var(--red);margin:0;">Optional Purchasable Data</h4>
+      </div>
+      <div class="card fragment fade-up" style="margin-bottom:10px;">
+        <h4 style="font-size:0.7em;color:var(--white);">Voter File</h4>
+        <p style="font-size:0.55em;"><strong>Source:</strong> L2 or TargetSmart &middot; <strong style="color:var(--orange);">$3-10K</strong></p>
+        <p style="font-size:0.55em;">Individual-level turnout data; precise registration-to-vote gap analysis</p>
+      </div>
+      <div class="card fragment fade-up" style="margin-bottom:10px;">
+        <h4 style="font-size:0.7em;color:var(--white);">Political Ad Spending by DMA</h4>
+        <p style="font-size:0.55em;"><strong>Source:</strong> AdImpact &middot; <strong style="color:var(--orange);">$5-15K</strong></p>
+        <p style="font-size:0.55em;">Quantifies where anti-trans disinformation dollars were spent</p>
+      </div>
+      <div class="card fragment fade-up">
+        <h4 style="font-size:0.7em;color:var(--white);">Google Trends Data</h4>
+        <p style="font-size:0.55em;"><strong>Source:</strong> Google API &middot; <strong style="color:var(--teal);">Free (labour)</strong></p>
+        <p style="font-size:0.55em;">Validates issue salience geographically</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE [NEW]: PIPELINE REALITY (1/2): THE DATA FOUNDATION -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Data &amp; Next Steps</span>
+  <h2 style="font-size:1.1em;margin-bottom:0.15em;">The Model is Built on Real Data</h2>
+  <p style="font-size:0.56em;color:var(--slate);margin-bottom:16px;">Six verified public datasets processed across 3,143 US counties</p>
+  <div class="card-grid-3" style="gap:12px;">
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">3,143</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">Election Returns 2020 + 2024</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">MIT MEDSL via GitHub mirror · presidential vote share and turnout by county</p>
+    </div>
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">70.9 MB</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">Census Age Distribution</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">Census FTP bulk file · share of population aged 18–34 across 3,144 counties</p>
+    </div>
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">323K</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">ActBlue Small-Dollar Donors</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">4.24 GB FEC bulk file stream-processed · unique donors $5–$200 across 2,760 counties</p>
+    </div>
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">3 / 3</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">Race Competitiveness Ratings</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">Cook / Sabato / Inside Elections · all three forecasters represented via Wikipedia</p>
+    </div>
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">50</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">Healthcare Ban / Shield Status</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">Movement Advancement Project · live state classification fetched May 2026</p>
+    </div>
+    <div class="card" style="padding:14px 16px;border-left:3px solid var(--teal);border-radius:8px;">
+      <div style="font-family:'DM Mono',monospace;font-size:1.8em;color:var(--teal);font-weight:600;line-height:1;margin-bottom:5px;">2 joins</div>
+      <h4 style="font-size:0.66em;margin:0 0 3px 0;">Geographic Crosswalks</h4>
+      <p style="font-size:0.52em;margin:0;color:var(--slate);">ZIP → county via Census ZCTA · CD → county via TIGER2024 spatial polygon intersection</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE [NEW]: PIPELINE REALITY (2/2): SOURCING GAPS -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label">Data &amp; Next Steps</span>
+  <h2 style="font-size:1.1em;margin-bottom:0.15em;">Three Sourcing Gaps: What They Mean</h2>
+  <p style="font-size:0.56em;color:var(--slate);margin-bottom:14px;">Most planned sources loaded cleanly. Three required workarounds that affect how to read Model B.</p>
+  <div class="card-grid-3" style="gap:12px;margin-bottom:14px;">
+    <div class="card" style="padding:12px 14px;border-left:3px solid var(--orange);border-radius:8px;">
+      <h4 style="font-size:0.66em;color:var(--orange);margin:0 0 5px 0;">ACLU Anti-Trans Bill Tracker</h4>
+      <p style="font-size:0.52em;margin:0 0 6px 0;color:var(--slate);">JavaScript-rendered; bill volumes by state could not be scraped.</p>
+      <p style="font-size:0.52em;margin:0;"><strong>Workaround:</strong> MAP ban/shield classification used as structural proxy. Within-state differentiation is approximated from published research.</p>
+    </div>
+    <div class="card" style="padding:12px 14px;border-left:3px solid var(--orange);border-radius:8px;">
+      <h4 style="font-size:0.66em;color:var(--orange);margin:0 0 5px 0;">PRRI American Values Atlas</h4>
+      <p style="font-size:0.52em;margin:0 0 6px 0;color:var(--slate);">JavaScript web app; no API, no bulk download, no scrape path.</p>
+      <p style="font-size:0.52em;margin:0;"><strong>Workaround:</strong> State-level acceptance scores drawn from published PRRI research. Directionally correct; not precisely sourced.</p>
+    </div>
+    <div class="card" style="padding:12px 14px;border-left:3px solid var(--orange);border-radius:8px;">
+      <h4 style="font-size:0.66em;color:var(--orange);margin:0 0 5px 0;">ALA Book Challenge Data</h4>
+      <p style="font-size:0.52em;margin:0 0 6px 0;color:var(--slate);">Published as national PDF infographics only; no geographic breakdown exists.</p>
+      <p style="font-size:0.52em;margin:0;"><strong>Workaround:</strong> County modifier dropped from model. All counties in a state share the same trans activity score.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+    <div style="padding:16px 20px;background:rgba(0,200,170,0.09);border-right:1px solid var(--border);">
+      <div style="font-size:0.55em;font-weight:700;color:var(--teal);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px;">Model A: Disengagement Index</div>
+      <div style="font-family:'DM Mono',monospace;font-size:1.5em;color:var(--teal);font-weight:600;margin-bottom:7px;">100% verified data</div>
+      <p style="font-size:0.53em;margin:0;">Turnout decline · Race competitiveness · Age distribution · ActBlue capacity, all from verified, fetchable public datasets. <strong style="color:var(--teal);">Rankings are reliable.</strong></p>
+    </div>
+    <div style="padding:16px 20px;background:rgba(255,107,53,0.09);">
+      <div style="font-size:0.55em;font-weight:700;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px;">Model B: Salience Index</div>
+      <div style="font-family:'DM Mono',monospace;font-size:1.5em;color:var(--orange);font-weight:600;margin-bottom:7px;">~52% verified data</div>
+      <p style="font-size:0.53em;margin:0;">Race competitiveness (35%) is real. PRRI acceptance (12.5%) and trans issue within-state scoring are approximated from published research. <strong style="color:var(--white);">Cross-state rankings reliable; within-state fine-grained rankings indicative only.</strong> Both are identified priority improvements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 29: LIMITATIONS & ASSUMPTIONS -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <span class="section-label red">Limitations &amp; Assumptions</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.4em;">Model Limitations</h2>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="card fragment fade-up" style="padding:12px 18px;border-left:3px solid var(--red);">
+      <h4 style="font-size:0.72em;margin:0;color:var(--red);">"Disaffection" is an attitude, not a demographic</h4>
+      <p style="font-size:0.58em;margin:4px 0 0 0;">Turnout decline is a proxy - it captures people who moved, died, or changed registration, not just those who chose not to vote. <strong>Mitigation:</strong> Cross-reference with voter file data (L2/TargetSmart) to distinguish deregistration from non-voting.</p>
+    </div>
+    <div class="card fragment fade-up" style="padding:12px 18px;border-left:3px solid var(--orange);">
+      <h4 style="font-size:0.72em;margin:0;color:var(--orange);">Model B's lead variable is state-level</h4>
+      <p style="font-size:0.58em;margin:4px 0 0 0;">All counties in a state receive the same "trans issue activity" score. County-level differentiation relies on the other two variables. This is acceptable - Model B's value is in state prioritisation.</p>
+    </div>
+    <div class="card fragment fade-up" style="padding:12px 18px;border-left:3px solid var(--orange);">
+      <h4 style="font-size:0.72em;margin:0;color:var(--orange);">Race ratings change throughout the cycle</h4>
+      <p style="font-size:0.58em;margin:4px 0 0 0;">A "Toss-Up" in May 2026 may be "Lean" by October. <strong>Mitigation:</strong> Re-run the model quarterly and before any major budget allocation decision.</p>
+    </div>
+    <div class="card fragment fade-up" style="padding:12px 18px;border-left:3px solid var(--slate);">
+      <h4 style="font-size:0.72em;margin:0;color:var(--slate);">Third-party vote data is incomplete</h4>
+      <p style="font-size:0.58em;margin:4px 0 0 0;">Many third-party votes aren't broken out by county. Limits ability to identify "Purity Progressive" geography through past voting behaviour. Use Green Party state-level results as a directional proxy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 30: ASSUMPTIONS -->
+<!-- ============================================================ -->
+<section class="slide-bg-4 dot-overlay" data-transition="slide">
+  <span class="section-label red">Limitations &amp; Assumptions</span>
+  <h2 style="font-size:1.2em;margin-bottom:0.5em;">Key Assumptions</h2>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="card fragment fade-up" style="padding:14px 18px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-family:'DM Mono',monospace;font-size:1.2em;color:var(--teal);font-weight:700;min-width:24px;">1</span>
+      <div>
+        <p style="font-size:0.68em;margin:0;"><strong>The 30% Dem vote share qualifying filter is appropriate.</strong> This excludes deep-red counties. If the campaign's goal evolves to include persuasion of moderates (not just progressive mobilisation), the filter should be lowered.</p>
+      </div>
+    </div>
+    <div class="card fragment fade-up" style="padding:14px 18px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-family:'DM Mono',monospace;font-size:1.2em;color:var(--teal);font-weight:700;min-width:24px;">2</span>
+      <div>
+        <p style="font-size:0.68em;margin:0;"><strong>Midterm turnout patterns from 2018 and 2022 are predictive of 2026.</strong> Standard assumption in political targeting but could be disrupted by unprecedented events.</p>
+      </div>
+    </div>
+    <div class="card fragment fade-up" style="padding:14px 18px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-family:'DM Mono',monospace;font-size:1.2em;color:var(--teal);font-weight:700;min-width:24px;">3</span>
+      <div>
+        <p style="font-size:0.68em;margin:0;"><strong>The four sub-audience segments are meaningful and distinct enough for different creative approaches.</strong> Should be validated through early-campaign A/B creative testing by geography.</p>
+      </div>
+    </div>
+    <div class="card fragment fade-up" style="padding:14px 18px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-family:'DM Mono',monospace;font-size:1.2em;color:var(--teal);font-weight:700;min-width:24px;">4</span>
+      <div>
+        <p style="font-size:0.68em;margin:0;"><strong>Platform targeting capabilities remain as described.</strong> Meta and Google have made significant policy changes in recent years; further restrictions could affect deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE [NEW]: AUGMENTATION & VALIDATION -->
+<!-- ============================================================ -->
+<section class="slide-bg-3 dot-overlay" data-transition="slide">
+  <span class="section-label purple">Model Augmentation &amp; Validation</span>
+  <h2 style="font-size:1.1em;margin-bottom:0.2em;">Emerging &amp; Unconventional Data Sources</h2>
+  <p style="font-size:0.56em;margin-bottom:6px;color:var(--slate);">Non-traditional signals to strengthen geographic prioritisation and independently validate county scores.</p>
+  <div class="card-grid" style="gap:7px;">
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:6px;padding:8px 13px;border-left:3px solid var(--purple);">
+        <h4 style="font-size:0.66em;color:var(--purple);margin-bottom:2px;">Drag Venue Density</h4>
+        <p style="font-size:0.53em;">Count of active drag bars, cabarets and LGBTQ+ venues by county (DragDB.com, Google Maps API, Yelp). High venue density signals visible queer community presence and elevated anti-trans legislative targeting. <span style="color:var(--slate);font-style:italic;">Free (scrape)</span></p>
+      </div>
+      <div class="card fragment fade-up" style="margin-bottom:6px;padding:8px 13px;border-left:3px solid var(--teal);">
+        <h4 style="font-size:0.66em;color:var(--teal);margin-bottom:2px;">Pride Event Growth Rate</h4>
+        <p style="font-size:0.53em;">Year-on-year change in Pride events by county (InterPride / Eventbrite). Rapid growth signals an energising community: a leading indicator of both salience and mobilisation potential. <span style="color:var(--slate);font-style:italic;">Free</span></p>
+      </div>
+      <div class="card fragment fade-up" style="padding:8px 13px;border-left:3px solid var(--orange);">
+        <h4 style="font-size:0.66em;color:var(--orange);margin-bottom:2px;">Local News Coverage Volume</h4>
+        <p style="font-size:0.53em;">Article count on transgender issues by DMA from <strong>Media Cloud</strong> (mediacloud.org). Counties with disproportionate news volume have a primed electorate and a media environment that amplifies campaign messaging. <span style="color:var(--slate);font-style:italic;">Free API</span></p>
+      </div>
+    </div>
+    <div>
+      <div class="card fragment fade-up" style="margin-bottom:6px;padding:8px 13px;border-left:3px solid var(--red);">
+        <h4 style="font-size:0.66em;color:var(--red);margin-bottom:2px;">IRS Migration Flows</h4>
+        <p style="font-size:0.53em;">County-to-county migration by year (IRS Statistics of Income). Inbound migrants from high-legislation states (TX, FL, TN) into our Tier 1 geographies are likely to be trans-issue-aware and politically motivated. <span style="color:var(--slate);font-style:italic;">Free</span></p>
+      </div>
+      <div class="card fragment fade-up" style="margin-bottom:6px;padding:8px 13px;border-left:3px solid var(--teal);">
+        <h4 style="font-size:0.66em;color:var(--teal);margin-bottom:2px;">Gender-Affirming Care Provider Density</h4>
+        <p style="font-size:0.53em;">Count of gender-affirming healthcare providers by county (GLMA directory). Where providers are concentrated, so are patients, families, and informed advocates primed to engage. <span style="color:var(--slate);font-style:italic;">Free</span></p>
+      </div>
+      <div class="card fragment fade-up" style="padding:8px 13px;border-left:3px solid var(--slate);">
+        <h4 style="font-size:0.66em;color:var(--slate);margin-bottom:2px;">How to use these signals</h4>
+        <p style="font-size:0.53em;">Run as independent checks against the primary model output. A county scoring high on Models A + B <strong style="color:var(--white);">and</strong> registering on 2-3 of these emerging indicators has the strongest confidence for Tier 1 designation and the highest budget priority.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 28: TREVOR PROJECT DATA REQUEST -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label orange">Data &amp; Next Steps</span>
+  <h2 style="font-size:1.15em;margin-bottom:0.4em;">Client Data Request</h2>
+  <p style="font-size:0.7em;margin-bottom:14px;">Proprietary data that would meaningfully strengthen the model and fill gaps public data cannot address:</p>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="card card-accent-top fragment fade-up" style="padding:14px 18px;border-top-color:var(--orange);">
+      <h4 style="font-size:0.75em;margin:0;">Helpline Call/Text Volume by Region</h4>
+      <p style="font-size:0.6em;margin:4px 0 0 0;">Validates Model B - shows where trans youth/families are in distress. High volume increases geography priority.</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="padding:14px 18px;border-top-color:var(--orange);">
+      <h4 style="font-size:0.75em;margin:0;">Website Traffic by Geography</h4>
+      <p style="font-size:0.6em;margin:4px 0 0 0;">Distinguishes geographies needing awareness-building vs. mobilisation.</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="padding:14px 18px;border-top-color:var(--orange);">
+      <h4 style="font-size:0.75em;margin:0;">Donor/Supporter Database Geography</h4>
+      <p style="font-size:0.6em;margin:4px 0 0 0;">Maps existing engaged base. Gaps between supporter geography and priority counties reveal untapped opportunities.</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="padding:14px 18px;border-top-color:var(--red);">
+      <h4 style="font-size:0.75em;margin:0;color:var(--red);">Supporter Sentiment Surveys &#9733;</h4>
+      <p style="font-size:0.6em;margin:4px 0 0 0;"><strong>Highest priority.</strong> The single most valuable dataset for identifying Single-Issue Defectors - the sub-audience hardest to proxy with public data.</p>
+    </div>
+    <div class="card card-accent-top fragment fade-up" style="padding:14px 18px;border-top-color:var(--orange);">
+      <h4 style="font-size:0.75em;margin:0;">Prior Campaign Performance by Region</h4>
+      <p style="font-size:0.6em;margin:4px 0 0 0;">Historical CPM, CTR, conversion data provides a cost-efficiency layer for budget allocation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 31: NEXT STEPS -->
+<!-- ============================================================ -->
+<section class="slide-bg-2 dot-overlay" data-transition="slide">
+  <span class="section-label">Next Steps</span>
+  <h2 style="font-size:1.25em;margin-bottom:0.5em;">Recommended Next Steps</h2>
+  <div class="timeline">
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">1</div>
+      <div class="timeline-content">
+        <strong>Request Client Data</strong>
+        <span>Submit data request (Section 8). Supporter sentiment surveys are highest priority.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">2</div>
+      <div class="timeline-content">
+        <strong>Acquire Core Datasets</strong>
+        <span>Download MIT MEDSL returns, Census ACS tables, compile race ratings. All freely available.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">3</div>
+      <div class="timeline-content">
+        <strong>Build &amp; Score the Models</strong>
+        <span>Process data to produce actual county-level scores for both models - the actionable target list.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">4</div>
+      <div class="timeline-content">
+        <strong>Validate with Common Sense</strong>
+        <span>Verify top-scoring counties align with on-the-ground reality. Discuss with field team.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">5</div>
+      <div class="timeline-content">
+        <strong>Map to Platform Targeting</strong>
+        <span>Convert county-level scores to platform-specific geographic targeting units.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num">6</div>
+      <div class="timeline-content">
+        <strong>Develop Segment-Specific Creative</strong>
+        <span>Brief creative teams on four sub-audiences with messaging direction from this framework.</span>
+      </div>
+    </div>
+    <div class="timeline-item fragment fade-up">
+      <div class="timeline-num" style="background:var(--orange);">7</div>
+      <div class="timeline-content">
+        <strong>Launch with a Test Phase</strong>
+        <span>Allocate 15-20% of budget to initial testing across Tier 1 counties. Measure engagement and CPA by segment before scaling.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 32: CLOSING -->
+<!-- ============================================================ -->
+<section class="slide-bg-1 dot-overlay" data-transition="slide">
+  <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;text-align:center;">
+    <div class="accent-line" style="width:60px;margin:0 auto 24px auto;"></div>
+    <h2 style="font-size:1.6em;text-align:center;margin-bottom:0.2em;">Sensei Advisory</h2>
+    <p style="font-size:0.8em;color:var(--slate);margin-bottom:2em;">Confidential</p>
+    <p style="font-size:0.75em;color:var(--white);margin-bottom:0.3em;">Julian Smilg</p>
+    <p style="font-size:0.65em;color:var(--slate);margin-bottom:2.5em;">May 2026</p>
+    <div style="border-top:1px solid var(--border);padding-top:20px;max-width:600px;">
+      <p style="font-size:0.5em;color:rgba(255,255,255,0.3);text-align:center;">
+        This document is confidential and contains strategic recommendations based on publicly available data and the author's professional analysis. Do not distribute without permission.
+      </p>
+    </div>
+  </div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://unpkg.com/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width: 1280,
+  height: 720,
+  margin: 0,
+  hash: true,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  backgroundTransition: 'slide',
+  center: false,
+  controls: true,
+  controlsLayout: 'bottom-right',
+  progress: true,
+  slideNumber: true,
+  pdfSeparateFragments: false,
+  pdfMaxPagesPerSlide: 1
+});
+</script>
+</body>
+</html>
